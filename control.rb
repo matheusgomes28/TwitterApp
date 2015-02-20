@@ -50,13 +50,19 @@ post '/register_validate' do
 
     # Check is username is valid
     if is_valid_username(params[:username]) then
+
+      # Create new db connection
       db = SQLite3::Database.new 'login.db'
+
       passDigest = Digest::MD5.hexdigest(params[:password])
 
+      # Insert user details into database
       db.execute "INSERT INTO users(username, password) VALUES('#{params[:username]}','#{passDigest}')"
       erb :accessGranted
+
     else
 
+      # Sends out error message to be displayed
       @error = 'Username already taken'
       erb :wrong_info
     end
