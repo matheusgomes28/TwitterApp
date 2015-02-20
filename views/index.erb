@@ -5,17 +5,15 @@
 
 <article id="featured">
   <div> <!-- Featured article - animated -->
-    <h2>Welcome to RGB Design!</h2>
-    <p>If your business is in need of a web site or mobile app, you came to the right place! RGB Design offer various web-design and software development related services, and the price is always fair.</p>
+    <form action="validate" method="post" >
+      <p>Username: <input type="text" size="20" name="username" /></p>
+      <p>Password: <input type="password" size="20" name="password" /></p>
+      <p><input type="submit" value="Submit" /></p>
+    </form>
+    <p><a href="/register">Not registered? Click here.</a></p>
   </div>
 </article>
 
-<% (0..9).each do |i| %>
-    <article>
-      <h1><%= @data[i][0] %></h1>
-      <h3><%= @data[i][1] %></h3>
-    </article>
-<% end %>
 
 <article>
   <h1><%= %></h1>
