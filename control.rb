@@ -24,22 +24,30 @@ post '/validate' do
   db = SQLite3::Database.new 'login.db'
   md5 = Digest::MD5.new
 
-  # Get the unique*** password hash from the db
-  password = db.execute("SELECT password FROM users WHERE username='#{params[:username]}'")[0][0]
 
+  if !is_valid_username(params[:username]) then
 
-  # Compares both hashes to see if password is the same
-  if password == md5.hexdigest(params[:password]).to_s then
+    # Get the unique*** password hash from the db
+    password = db.execute("SELECT password FROM users WHERE username='#{params[:username]}'")[0][0]
 
-    # Sends to access granted page
-    erb :accessGranted
+    # Compares both hashes to see if password is the same
+    if password == md5.hexdigest(params[:password]).to_s then
+
+      # Sends to access granted page
+      erb :accessGranted
+
+    else
+
+      # Sends to access denied page
+      erb :accessDenied
+
+    end
 
   else
-
-    # Sends to access denied page
-    erb :accessDenied
-
+    @error = 'Not a valid username'
+    erb :wrong_info
   end
+
 end
 
 
