@@ -133,6 +133,9 @@ article#featured{
     height: 400px;
 }
 
+article#featured table td{
+    padding: 5px;
+}
 article#featured div{
     position: absolute;
     bottom: 0; /*Position this on the bottom of featured article */
@@ -142,8 +145,27 @@ article#featured div{
     color: #FFF;
 }
 
+article#featured a:link,
+article#featured a:visited,
+article#featured a:hover,
+article#featured a:active{
+    color: #FFF;
+    text-decoration: none;
+}
+
+article#featured input{
+    color: #333;
+}
+
+article input#sub_button{
+    display: block;
+    height: 30px;
+    background: #333;
+    color: #EEE;
+    border: 2px solid #FFF;
+}
+
 article{
-    margin: 0px;
     margin: 40px 20px 40px 20px;
     padding: 20px 20px;
     background-color: #EEE;
