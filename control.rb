@@ -3,7 +3,7 @@ require 'sqlite3'
 require 'digest'
 require 'thin'
 require 'sinatra'
-
+include ERB::Util
 
 # The main page
 get '/' do
@@ -16,13 +16,13 @@ get '/register' do
   erb :register
 end
 
+# Initialize database and md5 digester
+db = SQLite3::Database.new 'login.db'
+md5 = Digest::MD5.new
+
 
 # The validation page...
 post '/validate' do
-
-  # Initialize database and md5 digester
-  db = SQLite3::Database.new 'login.db'
-  md5 = Digest::MD5.new
 
 
   if !is_valid_username(params[:username]) then
@@ -59,17 +59,19 @@ post '/register_validate' do
     # Check is username is valid
     if is_valid_username(params[:username]) then
 
-      # Create new db connection
-      db = SQLite3::Database.new 'login.db'
+      if !is_email_taken(params[:email]) then
+        passDigest = md5.hexdigest(params[:password])
 
-      passDigest = Digest::MD5.hexdigest(params[:password])
+        # Insert user details into database
+        db.execute "INSERT INTO users(username, password, email, twitter) VALUES('#{params[:username]}','#{passDigest}', '#{params[:email]}','#{params[:twitter]}')"
+        erb :accessGranted
 
-      # Insert user details into database
-      db.execute "INSERT INTO users(username, password) VALUES('#{params[:username]}','#{passDigest}')"
-      erb :accessGranted
+      else
+        @error = 'Email already registered'
+        erb :wrong_info
+      end
 
     else
-
       # Sends out error message to be displayed
       @error = 'Username already taken'
       erb :wrong_info
@@ -80,6 +82,7 @@ post '/register_validate' do
     erb :wrong_info
   end
 end
+
 
 def is_valid_username(username)
 
@@ -92,5 +95,17 @@ def is_valid_username(username)
 
   else
     return true
+  end
+end
+
+def is_email_taken(email)
+
+  db = SQLite3::Database.new 'login.db'
+
+  if db.execute("SELECT 1 FROM users WHERE email='#{email}'").length  > 0 then
+    return true
+
+  else
+    return false
   end
 end

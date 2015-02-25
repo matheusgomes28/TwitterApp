@@ -2,55 +2,29 @@
 
 
 <!-- WEBSITE ARTICLES -->
+<article id="form">
+  <form action="validate" method="post" >
+    <table>
+      <tr>
+        <td>Username: </td>
+        <td><input type="text" size="20" name="username" /></td>
+      </tr>
 
-<article id="featured">
-  <div> <!-- Featured article - animated -->
-    <form action="validate" method="post" >
-      <table>
-        <tr>
-          <td>Username: </td>
-          <td><input type="text" size="20" name="username" /></td>
-        </tr>
+      <tr>
+        <td>Password: </td>
+        <td><input type="password" size="20" name="password" /></td>
+      </tr>
 
-        <tr>
-          <td>Password: </td>
-          <td><input type="password" size="20" name="password" /></td>
-        </tr>
+      <tr>
+        <td><input id="sub_button" type="submit" value="Submit" /></td>
+      </tr>
 
-        <tr>
-          <td><input id="sub_button" type="submit" value="Submit" /></td>
-        </tr>
-
-        <tr>
-          <td colspan="2"><a href="/register">Not registered? Click here.</a></td>
-        </tr>
-      </table>
-    </form>
-  </div>
+      <tr>
+        <td colspan="2"><a href="/register">Not registered? Click here.</a></td>
+      </tr>
+    </table>
+  </form>
 </article>
-
-
-<article>
-  <h1><%= %></h1>
-  <figure>
-    <object data="images/layout-template.svg" type="image/svg+xml">
-      <!-- Fallback image -->
-      <img src="images/layout-template.jpg" alt="Image of a website template" />
-    </object>
-    <figcaption>Choose from a variety of different designs!</figcaption>
-  </figure>
-
-  <p>Every company should have its own space online. This is why RGB Design exists - our aim is to help businesses to get their own web sites. A website not only gives your business the opporunity to conquer more customers online, but it also gives your company a unique look. In addition, you can also improve the relationship between you and your customers; a well planned website will always put the users in first place, for this reason, the users will be able to get information about your company or even contact you using your website. Get a website today and show your customers that your business really cares about them!</p>
-
-  <p><span class="bold">We are really good at what we do</span>. Some of our clients include companies such as Coca-Cola, Telegraph, BBC and ITV - they recognise that we are the best web designers and we did not disappoint them; as you can see in their websites, we have developed outstanding layouts. Don't worry if you are not as famous as some of our clients because we have also developed websites for small businesses and websites for personal use.</p>
-
-  <h2>Smaller Screen Sizes, Bigger Audiences</h2>
-
-  <p>Over the past few years, the number of smartphones has increased exponentially. For this reason, we have decided to start develoing mobile applications for both Android and Apple. With a stylish mobile application, you can attract more users and boost your company's popularity.</p>
-
-</article>
-
-<div class="clear"></div>
 
 
 <%= erb :footer %>
