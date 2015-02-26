@@ -5,6 +5,28 @@ require 'thin'
 require 'sinatra'
 include ERB::Util
 
+#Enable sessions for login system
+enable :sessions
+set :session_secret, 'team09init'
+
+# Dont tweet anything! personal account being used
+config = {
+    :consumer_key => '0PjuwaszRC2e90eJJHXpPEcPD',
+    :consumer_secret => 'mQu0dEFa5TdQw4sjsSbBUCauJfg09EX6niJDP9BlVi7VYr2wGT',
+    :access_token => '266130775-hHLandrpZdjMiCUPY7792InYD4jThic8EScsf1GR',
+    :access_token_secret => 'dCwl3V9CUbn1VPvBhSia00o4vsObnIqPjYbksKRlROS6M'
+}
+
+client = Twitter::REST::Client.new(config)
+OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE #Fix SSL problem
+
+# Core code ended
+
+get '/logout' do
+  session.clear
+  'Logged out'
+end
+
 # The main page
 get '/' do
   erb :index
@@ -16,6 +38,7 @@ get '/register' do
   erb :register
 end
 
+
 # Initialize database and md5 digester
 db = SQLite3::Database.new 'login.db'
 md5 = Digest::MD5.new
@@ -23,7 +46,6 @@ md5 = Digest::MD5.new
 
 # The validation page...
 post '/validate' do
-
 
   if !is_valid_username(params[:username]) then
 
@@ -33,8 +55,10 @@ post '/validate' do
     # Compares both hashes to see if password is the same
     if password == md5.hexdigest(params[:password]).to_s then
 
-      # Sends to access granted page
-      erb :accessGranted
+      # Sends to access granted page and creates session
+      session[:logged_in] = true
+      session[:username] = params[:username]
+      redirect '/search'
 
     else
 
@@ -50,6 +74,20 @@ post '/validate' do
 
 end
 
+# The search page
+get '/search' do
+  erb :tweet_search
+end
+
+get '/do_search' do
+
+  #protect page
+  redirect '/' unless session[:logged_in]
+
+  # Get a tweet list containing recent search results
+  @search_list = client.search(params[:search]).take(10)
+  erb :show_tweets
+end
 
 # The register validation
 post '/register_validate' do

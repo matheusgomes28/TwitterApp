@@ -1,0 +1,17 @@
+<%= erb :header %>
+<article id="form">
+  <h1>Search for: <%=h params[:search] %></h1>
+  <table>
+    <tr>
+      <th>Id</th>
+      <th>Tweet</th>
+    </tr>
+    <% @search_list.each do |tweet| %>
+        <tr>
+          <td><%=h tweet.id %></td>
+          <td><%=h tweet.text%></td>
+        </tr>
+    <% end %>
+  </table>
+</article>
+<%= erb :footer %>

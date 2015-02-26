@@ -1,0 +1,6 @@
+<% if session[:logged_in] then %>
+    <ul>
+      <li>Welcome <%= session[:username] %>!</li>
+      <li><a alt="logout" href="/logout">Logout</a></li>
+    </ul>
+<% end %>

@@ -1,0 +1,12 @@
+<% redirect '/' unless session[:logged_in] %>
+<%= erb :header %>
+<article id="form">
+  <h1>Welcome Back! Search for something...</h1>
+  <form action="do_search" method="get">
+    <p>
+      Search for a term: <input name="search" value="Type Something" />
+      <input id="sub_button" type="submit" value="Search" />
+    </p>
+  </form>
+</article>
+<%= erb :footer %>
