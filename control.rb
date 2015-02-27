@@ -18,6 +18,7 @@ config = {
 }
 
 client = Twitter::REST::Client.new(config)
+
 OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE #Fix SSL problem
 
 # Core code ended

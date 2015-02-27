@@ -8,7 +8,10 @@
     </tr>
     <% @search_list.each do |tweet| %>
         <tr>
-          <td><%=h tweet.id %></td>
+          <td>
+            <%=h tweet.user.screen_name %><br />
+            <img alt="image" src="<%= tweet.user.profile_image_uri.to_s %>" />
+          </td>
           <td><%=h tweet.text%></td>
         </tr>
     <% end %>
