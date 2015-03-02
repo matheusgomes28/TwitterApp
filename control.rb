@@ -30,7 +30,11 @@ end
 
 # The main page
 get '/' do
-  erb :index
+
+  # Redirect user if logged in
+  redirect '/search' unless !session[:logged_in]
+
+  erb :index # Else show login
 end
 
 
