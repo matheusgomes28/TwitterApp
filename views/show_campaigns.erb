@@ -1,0 +1,30 @@
+<%= erb :header %>
+
+
+<!-- WEBSITE ARTICLES -->
+<div id="maincontent">
+  <article id="form">
+    <% if @camps.length == 0 then %>
+        <p>No campaigns found!</p>
+    <% else %>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Keyword (hashtag)</th>
+        </tr>
+        <% @camps.each do |campaign| %>
+            <tr>
+              <td><%=h campaign[0]%></td>
+              <td><%=h campaign[1]%></td>
+              <td><%=h campaign[2]%></td>
+            </tr>
+        <% end %>
+      </table>
+    <% end %>
+
+  </article>
+</div>
+
+
+<%= erb :footer %>

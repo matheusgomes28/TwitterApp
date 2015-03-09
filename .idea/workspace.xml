@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d5dc3dc-502f-42f3-a2ec-044fc139bb9f" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/campaigns.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/show_campaigns.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.db" afterPath="$PROJECT_DIR$/login.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/control.rb" afterPath="$PROJECT_DIR$/control.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/project.iml" afterPath="$PROJECT_DIR$/.idea/project.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/register.erb" afterPath="$PROJECT_DIR$/views/register.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="project.iws" />
@@ -19,7 +22,7 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/project@All_tests_in_project__project.coverage" NAME="All tests in project: project Coverage Results" MODIFIED="1424463138265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="project" />
-    <SUITE FILE_PATH="coverage/project@control.coverage" NAME="control Coverage Results" MODIFIED="1425302309995" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="project" />
+    <SUITE FILE_PATH="coverage/project@control.coverage" NAME="control Coverage Results" MODIFIED="1425935333075" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="project" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -36,15 +39,47 @@
       <file leaf-file-name="control.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/control.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.42009884" vertical-offset="0" max-vertical-offset="1258">
-              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.17522123" vertical-offset="479" max-vertical-offset="1751">
+              <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
               <folding>
-                <element signature="e#1073#1712#0" expanded="false" />
-                <element signature="e#1791#1987#0" expanded="false" />
-                <element signature="e#2041#2831#0" expanded="false" />
-                <element signature="e#2834#3095#0" expanded="false" />
-                <element signature="e#3097#3294#0" expanded="false" />
+                <element signature="e#437#474#0" expanded="false" />
+                <element signature="e#500#619#0" expanded="false" />
+                <element signature="e#658#680#0" expanded="false" />
+                <element signature="e#725#2196#0" expanded="false" />
+                <element signature="e#2230#2256#0" expanded="false" />
+                <element signature="e#2275#2471#0" expanded="false" />
+                <element signature="e#2531#3675#1" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show_campaigns.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/show_campaigns.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-15.692307" vertical-offset="17" max-vertical-offset="612">
+              <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="campaigns.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/campaigns.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.153846" vertical-offset="136" max-vertical-offset="833">
+              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/index.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.1153846" vertical-offset="39" max-vertical-offset="646">
+              <caret line="4" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -62,8 +97,8 @@
       <file leaf-file-name="register.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/register.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="680">
-              <caret line="27" column="47" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="952">
+              <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -103,9 +138,11 @@
         <option value="$PROJECT_DIR$/views/show_tweets.erb" />
         <option value="$PROJECT_DIR$/views/user_control.erb" />
         <option value="$PROJECT_DIR$/views/header.erb" />
-        <option value="$PROJECT_DIR$/views/register.erb" />
         <option value="$PROJECT_DIR$/public/style.css" />
         <option value="$PROJECT_DIR$/views/tweet_search.erb" />
+        <option value="$PROJECT_DIR$/views/register.erb" />
+        <option value="$PROJECT_DIR$/views/show_campaigns.erb" />
+        <option value="$PROJECT_DIR$/views/campaigns.erb" />
         <option value="$PROJECT_DIR$/control.rb" />
       </list>
     </option>
@@ -373,11 +410,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -396,9 +433,9 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32946146" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -419,33 +456,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/control.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2652">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#1073#1712#0" expanded="false" />
-            <element signature="e#1791#1987#0" expanded="false" />
-            <element signature="e#2041#2831#0" expanded="false" />
-            <element signature="e#2834#3095#0" expanded="false" />
-            <element signature="e#3097#3294#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1819" max-vertical-offset="2652">
-          <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/register.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="680">
@@ -475,11 +490,13 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2652">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#1073#1712#0" expanded="false" />
-            <element signature="e#1791#1987#0" expanded="false" />
-            <element signature="e#2041#2831#0" expanded="false" />
-            <element signature="e#2834#3095#0" expanded="false" />
-            <element signature="e#3097#3294#0" expanded="false" />
+            <element signature="e#437#474#0" expanded="false" />
+            <element signature="e#500#619#0" expanded="false" />
+            <element signature="e#658#680#0" expanded="false" />
+            <element signature="e#725#2196#0" expanded="false" />
+            <element signature="e#2230#2256#0" expanded="false" />
+            <element signature="e#2275#2471#0" expanded="false" />
+            <element signature="e#2531#3675#1" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -535,11 +552,13 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1989">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#1073#1712#0" expanded="false" />
-            <element signature="e#1791#1987#0" expanded="false" />
-            <element signature="e#2041#2831#0" expanded="false" />
-            <element signature="e#2834#3095#0" expanded="false" />
-            <element signature="e#3097#3294#0" expanded="false" />
+            <element signature="e#437#474#0" expanded="false" />
+            <element signature="e#500#619#0" expanded="false" />
+            <element signature="e#658#680#0" expanded="false" />
+            <element signature="e#725#2196#0" expanded="false" />
+            <element signature="e#2230#2256#0" expanded="false" />
+            <element signature="e#2275#2471#0" expanded="false" />
+            <element signature="e#2531#3675#1" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -586,11 +605,13 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1989">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#1073#1712#0" expanded="false" />
-            <element signature="e#1791#1987#0" expanded="false" />
-            <element signature="e#2041#2831#0" expanded="false" />
-            <element signature="e#2834#3095#0" expanded="false" />
-            <element signature="e#3097#3294#0" expanded="false" />
+            <element signature="e#437#474#0" expanded="false" />
+            <element signature="e#500#619#0" expanded="false" />
+            <element signature="e#658#680#0" expanded="false" />
+            <element signature="e#725#2196#0" expanded="false" />
+            <element signature="e#2230#2256#0" expanded="false" />
+            <element signature="e#2275#2471#0" expanded="false" />
+            <element signature="e#2531#3675#1" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -637,11 +658,13 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="680" max-vertical-offset="1904">
           <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding>
-            <element signature="e#1073#1712#0" expanded="false" />
-            <element signature="e#1791#1987#0" expanded="false" />
-            <element signature="e#2041#2831#0" expanded="false" />
-            <element signature="e#2834#3095#0" expanded="false" />
-            <element signature="e#3097#3294#0" expanded="false" />
+            <element signature="e#437#474#0" expanded="false" />
+            <element signature="e#500#619#0" expanded="false" />
+            <element signature="e#658#680#0" expanded="false" />
+            <element signature="e#725#2196#0" expanded="false" />
+            <element signature="e#2230#2256#0" expanded="false" />
+            <element signature="e#2275#2471#0" expanded="false" />
+            <element signature="e#2531#3675#1" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -688,11 +711,13 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1734">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#1073#1712#0" expanded="false" />
-            <element signature="e#1791#1987#0" expanded="false" />
-            <element signature="e#2041#2831#0" expanded="false" />
-            <element signature="e#2834#3095#0" expanded="false" />
-            <element signature="e#3097#3294#0" expanded="false" />
+            <element signature="e#437#474#0" expanded="false" />
+            <element signature="e#500#619#0" expanded="false" />
+            <element signature="e#658#680#0" expanded="false" />
+            <element signature="e#725#2196#0" expanded="false" />
+            <element signature="e#2230#2256#0" expanded="false" />
+            <element signature="e#2275#2471#0" expanded="false" />
+            <element signature="e#2531#3675#1" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -717,11 +742,13 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1598">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#1073#1712#0" expanded="false" />
-            <element signature="e#1791#1987#0" expanded="false" />
-            <element signature="e#2041#2831#0" expanded="false" />
-            <element signature="e#2834#3095#0" expanded="false" />
-            <element signature="e#3097#3294#0" expanded="false" />
+            <element signature="e#437#474#0" expanded="false" />
+            <element signature="e#500#619#0" expanded="false" />
+            <element signature="e#658#680#0" expanded="false" />
+            <element signature="e#725#2196#0" expanded="false" />
+            <element signature="e#2230#2256#0" expanded="false" />
+            <element signature="e#2275#2471#0" expanded="false" />
+            <element signature="e#2531#3675#1" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -746,11 +773,13 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="816">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding>
-            <element signature="e#1073#1712#0" expanded="false" />
-            <element signature="e#1791#1987#0" expanded="false" />
-            <element signature="e#2041#2831#0" expanded="false" />
-            <element signature="e#2834#3095#0" expanded="false" />
-            <element signature="e#3097#3294#0" expanded="false" />
+            <element signature="e#437#474#0" expanded="false" />
+            <element signature="e#500#619#0" expanded="false" />
+            <element signature="e#658#680#0" expanded="false" />
+            <element signature="e#725#2196#0" expanded="false" />
+            <element signature="e#2230#2256#0" expanded="false" />
+            <element signature="e#2275#2471#0" expanded="false" />
+            <element signature="e#2531#3675#1" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -791,20 +820,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="612">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="26" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/show_tweets.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="374">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/user_control.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.05711086" vertical-offset="0" max-vertical-offset="893">
@@ -827,14 +842,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/register.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="680">
-          <caret line="27" column="47" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1819" max-vertical-offset="2652">
@@ -851,16 +858,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/register.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="952">
+          <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.1153846" vertical-offset="39" max-vertical-offset="646">
+          <caret line="4" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/show_tweets.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.05851979" vertical-offset="0" max-vertical-offset="581">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/show_campaigns.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.692307" vertical-offset="17" max-vertical-offset="612">
+          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/campaigns.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.153846" vertical-offset="136" max-vertical-offset="833">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/control.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42009884" vertical-offset="0" max-vertical-offset="1258">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.17522123" vertical-offset="479" max-vertical-offset="1751">
+          <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
           <folding>
-            <element signature="e#1073#1712#0" expanded="false" />
-            <element signature="e#1791#1987#0" expanded="false" />
-            <element signature="e#2041#2831#0" expanded="false" />
-            <element signature="e#2834#3095#0" expanded="false" />
-            <element signature="e#3097#3294#0" expanded="false" />
+            <element signature="e#437#474#0" expanded="false" />
+            <element signature="e#500#619#0" expanded="false" />
+            <element signature="e#658#680#0" expanded="false" />
+            <element signature="e#725#2196#0" expanded="false" />
+            <element signature="e#2230#2256#0" expanded="false" />
+            <element signature="e#2275#2471#0" expanded="false" />
+            <element signature="e#2531#3675#1" expanded="false" />
           </folding>
         </state>
       </provider>
