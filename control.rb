@@ -9,20 +9,46 @@ include ERB::Util
 enable :sessions
 set :session_secret, 'team09init'
 
-before do
-  @db = SQLite3::Database.new('login.db');
-end
-
-# Initialize database and md5 digester
-md5 = Digest::MD5.new
-
-client = nil # This needs to be global
 OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE #Fix SSL problem
+
+before do
+
+  # Initialize database, client and md5 digester
+  @db = SQLite3::Database.new('login.db')
+
+  @md5 = Digest::MD5.new
+
+  if session[:logged_in] then
+
+    # Get user's tokens from db
+    user_details = @db.execute %{
+                                   SELECT settings.consumer_key,
+                                          settings.consumer_secret,
+                                          settings.access_token,
+                                          settings.access_token_secret
+                                   FROM users, settings
+                                   WHERE users.username = '#{session[:username]}' AND users.username = settings.username;
+                                  }
+
+    config = {
+        :consumer_key => user_details[0][0],
+        :consumer_secret => user_details[0][1],
+        :access_token => user_details[0][2],
+        :access_token_secret => user_details[0][3],
+    }
+
+    # Create client
+    @client = Twitter::REST::Client.new(config)
+
+  end
+
+end
 
 
 get '/logout' do
   session.clear
-  'Logged out'
+
+  erb :logout
 end
 
 # The main page
@@ -50,30 +76,10 @@ post '/validate' do
     password = @db.execute("SELECT password FROM users WHERE username='#{params[:username]}'")[0][0]
 
     # Compares both hashes to see if password is the same
-    if password == md5.hexdigest(params[:password]).to_s then
+    if password == @md5.hexdigest(params[:password]).to_s then
 
       session[:logged_in] = true
       session[:username] = params[:username]
-
-      # Get user's tokens from db
-      user_details = @db.execute %{
-                                   SELECT settings.consumer_key,
-                                          settings.consumer_secret,
-                                          settings.access_token,
-                                          settings.access_token_secret
-                                   FROM users, settings
-                                   WHERE users.username = '#{session[:username]}' AND users.username = settings.username;
-                                  }
-
-      config = {
-          :consumer_key => user_details[0][0],
-          :consumer_secret => user_details[0][1],
-          :access_token => user_details[0][2],
-          :access_token_secret => user_details[0][3],
-      }
-
-      client = Twitter::REST::Client.new(config)
-
 
       # Sends to access granted page and creates session
 
@@ -104,7 +110,7 @@ get '/do_search' do
   redirect '/' unless session[:logged_in]
 
   # Get a tweet list containing recent search results
-  @search_list = client.search(params[:search]).take(10)
+  @search_list = @client.search(params[:search]).take(10)
   erb :show_tweets
 end
 
@@ -117,7 +123,7 @@ post '/register_validate' do
     if is_valid_username(params[:username]) then
 
       if !is_email_taken(params[:email]) then
-        passDigest = md5.hexdigest(params[:password])
+        passDigest = @md5.hexdigest(params[:password])
 
         # Insert user details into database
         query = %{BEGIN;
@@ -164,15 +170,25 @@ end
 
 get '/show_campaigns' do
 
+  puts params[:order]
   #simple select
   query = 'SELECT name, desc, keyword FROM campaigns'
+  if params[:order] != nil then
+    query += " ORDER BY ? ;"
+  else
+    query += ';'
+  end
 
-  # Send user and campaign results to show_campaigns page
-  @camps = @db.execute query
+  # Send user and campaign results to show_campaigns page FIXXXX
+  @camps = @db.execute(query, params[:order])
+
   erb :show_campaigns
 end
 
 get '/settings' do
+
+  # Only accessible to users
+  redirect '/' unless session[:logged_in]
 
   # Gettings results from linked tables
   user_details = @db.execute(%{
@@ -198,6 +214,13 @@ get '/settings' do
   erb :settings
 end
 
+get '/messages' do
+
+  # Get direct messages from the client
+  @direct_messages = @client.direct_messages
+
+  erb :direct_messages
+end
 
 def is_valid_username(username)
 

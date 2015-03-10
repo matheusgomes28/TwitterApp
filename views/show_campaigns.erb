@@ -9,9 +9,9 @@
     <% else %>
       <table>
         <tr>
-          <th>Name</th>
-          <th>Description</th>
-          <th>Keyword (hashtag)</th>
+          <th><a href="/show_campaigns?order=name">Name</a></th>
+          <th><a href="/show_campaigns?order=desc">Description</a></th>
+          <th><a href="/show_campaigns?order=keyword">Keyword (hashtag)</a></th>
         </tr>
         <% @camps.each do |campaign| %>
             <tr>

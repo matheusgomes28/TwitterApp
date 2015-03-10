@@ -1,0 +1,59 @@
+<% redirect '/' unless session[:logged_in] %>
+<%= erb :header %>
+
+
+<!-- WEBSITE ARTICLES -->
+<div id="maincontent">
+  <article id="form">
+    <form action="validate" method="post" >
+      <table>
+        <tr>
+          <td>Username: </td>
+          <td><%=h session[:username] %></td>
+        </tr>
+
+        <tr>
+          <td>Password: </td>
+          <td><input type="password" size="20" name="password" value="<%=h @password %>"/></td>
+        </tr>
+
+        <tr>
+          <td>Email: </td>
+          <td><input type="text" size="20" name="email" value="<%=h @email %>"/></td>
+        </tr>
+
+        <tr>
+          <td>Twitter: </td>
+          <td><input type="text" size="20" name="twitter" value="<%=h @twitter %>"/></td>
+        </tr>
+
+        <tr>
+          <td>Consumer Key: </td>
+          <td><input type="text" size="20" name="consumer_key" value="<%=h @c_key %>"/></td>
+        </tr>
+
+        <tr>
+          <td>Consumer Secret: </td>
+          <td><input type="text" size="20" name="consumer_secret" value="<%=h @c_secret %>"/></td>
+        </tr>
+
+        <tr>
+          <td>Access Token: </td>
+          <td><input type="text" size="20" name="access_token" value="<%=h @access_token %>"/></td>
+        </tr>
+
+        <tr>
+          <td>Consumer Key: </td>
+          <td><input type="text" size="20" name="access_token_secret" value="<%=h @access_token_s %>"/></td>
+        </tr>
+
+        <tr>
+          <td><input id="sub_button" type="submit" value="Submit" /></td>
+        </tr>
+      </table>
+    </form>
+  </article>
+</div>
+
+
+<%= erb :footer %>
