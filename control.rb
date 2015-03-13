@@ -47,7 +47,7 @@ end
 
 get '/logout' do
   session.clear
-
+  @title = 'Logged out!'
   erb :logout
 end
 
@@ -57,12 +57,14 @@ get '/' do
   # Redirect user if logged in
   redirect '/search' unless !session[:logged_in]
 
+  @title = 'TweetCamp - Log in'
   erb :index # Else show login
 end
 
 
 # The register page
 get '/register' do
+  @title = 'Register with us!'
   erb :register
 end
 
@@ -101,6 +103,7 @@ end
 
 # The search page
 get '/search' do
+  @title = 'Search page'
   erb :tweet_search
 end
 
@@ -111,6 +114,8 @@ get '/do_search' do
 
   # Get a tweet list containing recent search results
   @search_list = @client.search(params[:search]).take(10)
+
+  @title = 'Showing search results'
   erb :show_tweets
 end
 
@@ -161,27 +166,34 @@ post '/campaign' do
 
   # redirect user to campaign page
   @submitted = true
+  @title = 'Creating a campaign'
   erb :campaigns
 end
 
 get '/campaign' do
+  @title = 'Create a campaign'
   erb :campaigns
 end
 
 get '/show_campaigns' do
 
-  puts params[:order]
   #simple select
-  query = 'SELECT name, desc, keyword FROM campaigns'
   if params[:order] != nil then
-    query += " ORDER BY ? ;"
+    query = "SELECT name, desc, keyword, id FROM campaigns ORDER BY #{params[:order]}"
   else
-    query += ';'
+    query = 'SELECT name, desc, keyword, id FROM campaigns'
   end
 
   # Send user and campaign results to show_campaigns page FIXXXX
-  @camps = @db.execute(query, params[:order])
+  @camps = @db.execute(query)
 
+  @title = 'Showing campaigns'
+  erb :show_campaigns
+end
+
+post '/show_campaigns' do
+  query = 'DELETE FROM campaigns WHERE id = ?';
+  @db.execute(query, params[:id])
   erb :show_campaigns
 end
 
@@ -211,14 +223,18 @@ get '/settings' do
   @access_token = user_details[0][5]
   @access_token_s = user_details[0][6]
 
+  @title = 'My Settings'
   erb :settings
 end
 
 get '/messages' do
 
+  redirect '/' unless session[:logged_in]
+
   # Get direct messages from the client
   @direct_messages = @client.direct_messages
 
+  @title = 'My Direct Messages'
   erb :direct_messages
 end
 

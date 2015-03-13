@@ -142,10 +142,58 @@ input#sub_button{
 }
 
 /* Footer */
-footer {
+footer{
     position: absolute;
-    bottom: 0;
-    height: 150px;
+    bottom: 0; /* ALWAYS on the bottom of the page */
     width: 100%;
-    background: #000;
+    height: 150px;
+    color: #FFF;
+    background-color: #000;
 }
+
+footer div{
+    display: table; /* display as table to vertically align cells */
+    width: 28%;
+    height: 150px;
+}
+
+footer div p, footer div ul{
+    display: table-cell; /* behave as a cell */
+    height: 100%;
+    vertical-align: middle; /* cell atribute to vertically align */
+}
+
+footer div ul{
+    list-style-type: none; /*remove list decoration */
+}
+
+footer a:link, footer a:hover,
+footer a:active, footer a:visited{ /* Properties for footer links */
+    color: #FFF;
+    text-decoration: none;
+}
+
+footer div p#socials{ /* Push social network items to the far right */
+    text-align: right;
+}
+
+/* GENERAL PURPOSE STUFF */
+.right{
+    float: right;
+}
+.left{
+    margin-left: 20px;
+    float: left;
+}
+.clear{
+    clear: both;
+}
+
+h1, h2, h3, h4, h5, h6{
+    clear: both;
+}
+
+.bold{
+    font-weight: bold;
+}
+
