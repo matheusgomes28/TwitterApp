@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d5dc3dc-502f-42f3-a2ec-044fc139bb9f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/Thumbs.db" afterPath="$PROJECT_DIR$/public/images/Thumbs.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/control.rb" afterPath="$PROJECT_DIR$/control.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/footer.erb" afterPath="$PROJECT_DIR$/views/footer.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/header.erb" afterPath="$PROJECT_DIR$/views/header.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/show_campaigns.erb" afterPath="$PROJECT_DIR$/views/show_campaigns.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/style.css" afterPath="$PROJECT_DIR$/public/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="project.iws" />
@@ -422,13 +416,20 @@
       <option name="project" value="LOCAL" />
       <updated>1426022403129</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Improve the aesthetics of the website by adding icons and some other stuff. Each page has an unique title now, in addition, I started working on the deletions of campaigns (not finished but shouldn't take more than a couple of hours to finish it).">
+      <created>1426280642528</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1426280642528</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -445,7 +446,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -469,7 +469,8 @@
     <MESSAGE value="Added pages to create campaigns and to show all the campaigns. Also did some work on the database, although it's not yet normalised,  I applied some common sense to split some tables up so that the data is less redundant." />
     <MESSAGE value="Added simple settings page. User will then be able to change his/her details." />
     <MESSAGE value="Added direct messages page, as well as starting the ordering of campaigns requested by the user - this is not yet finished but shouldn't be hard to fix. I'll finish it off when I find a solution to a problem I'm encountering." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added direct messages page, as well as starting the ordering of campaigns requested by the user - this is not yet finished but shouldn't be hard to fix. I'll finish it off when I find a solution to a problem I'm encountering." />
+    <MESSAGE value="Improve the aesthetics of the website by adding icons and some other stuff. Each page has an unique title now, in addition, I started working on the deletions of campaigns (not finished but shouldn't take more than a couple of hours to finish it)." />
+    <option name="LAST_COMMIT_MESSAGE" value="Improve the aesthetics of the website by adding icons and some other stuff. Each page has an unique title now, in addition, I started working on the deletions of campaigns (not finished but shouldn't take more than a couple of hours to finish it)." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
