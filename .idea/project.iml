@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="RUBY_MODULE" version="4">
+  <component name="CompassSettings">
+    <option name="compassSupportEnabled" value="true" />
+  </component>
   <component name="ModuleRunConfigurationManager">
     <configuration default="false" name="All tests in project: project" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest" temporary="true">
       <predefined_log_file id="RUBY_TESTUNIT" enabled="true" />
@@ -78,3 +81,4 @@
     <orderEntry type="library" scope="PROVIDED" name="twitter (v5.14.0, ruby-2.1.5-p273) [gem]" level="application" />
   </component>
 </module>
+
