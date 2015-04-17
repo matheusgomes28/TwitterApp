@@ -16,6 +16,10 @@ def is_valid_username(username)
 
 end
 
+# Check if the email is already
+# registered on the system by
+# doing a simple query to return
+# records with an email.
 def is_email_taken(email)
 
   # Open the database
