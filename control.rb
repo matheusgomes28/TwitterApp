@@ -5,6 +5,8 @@ require 'thin'
 require 'sinatra'
 include ERB::Util
 
+require_relative(useful_functions)
+
 #Enable sessions for login system
 enable :sessions
 set :session_secret, 'team09init'
@@ -236,30 +238,4 @@ get '/messages' do
 
   @title = 'My Direct Messages'
   erb :direct_messages
-end
-
-def is_valid_username(username)
-
-  db = SQLite3::Database.new 'login.db'
-
-  # if value is returned then username is not valid
-  if db.execute("SELECT 1 FROM users WHERE username='#{username}'").length > 0 then
-
-    return false
-
-  else
-    return true
-  end
-end
-
-def is_email_taken(email)
-
-  db = SQLite3::Database.new 'login.db'
-
-  if db.execute("SELECT 1 FROM users WHERE email='#{email}'").length  > 0 then
-    return true
-
-  else
-    return false
-  end
 end
