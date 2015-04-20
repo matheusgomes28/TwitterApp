@@ -10,7 +10,7 @@ require('twitter')
 get '/' do
 
   # Redirect user if logged in
-  redirect '/search' unless !session[:logged_in]
+  redirect '/home' unless !session[:logged_in]
 
   @title = 'TweetCamp - Log in'
   erb :index # Else show login
@@ -29,9 +29,9 @@ get '/register' do
 end
 
 # The search page
-get '/search' do
+get '/home' do
   @title = 'Search page'
-  erb :tweet_search
+  erb :home
 end
 
 get '/do_search' do
@@ -41,6 +41,14 @@ get '/do_search' do
 
   # Get a tweet list containing recent search results
   @search_list = @client.search(params[:search]).take(10)
+
+  puts params[:save_search]
+
+  if params[:save_search] == 'on' then
+    query = 'INSERT INTO searches(username, search) VALUES(?, ?);'
+    @db.execute(query, [session[:username], params[:search]])
+    puts 'saved search'
+  end
 
   @title = 'Showing search results'
   erb :show_tweets

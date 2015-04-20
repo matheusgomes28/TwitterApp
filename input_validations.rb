@@ -24,7 +24,7 @@ post '/login_validate' do
 
       # Sends to access granted page and creates session
 
-      redirect '/search'
+      redirect '/home'
 
     else
 
