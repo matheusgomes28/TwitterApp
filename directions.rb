@@ -85,17 +85,6 @@ get '/show_campaigns' do
   erb :show_campaigns
 end
 
-get '/messages' do
-
-  redirect '/' unless session[:logged_in]
-
-  # Get direct messages from the client
-  @direct_messages = @client.direct_messages
-
-  @title = 'My Direct Messages'
-  erb :direct_messages
-end
-
 get '/campaign' do
   @title = 'Create a campaign'
   erb :campaigns
