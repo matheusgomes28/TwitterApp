@@ -1,0 +1,14 @@
+<%= erb :header %>
+<article id="form">
+  <h1>Search History For: <%=h session[:username] %></h1>
+  <table>
+    <% @searches.each do |search| %>
+        <tr>
+          <td>
+            <%=h search[0] %>
+          </td>
+        </tr>
+    <% end %>
+  </table>
+</article>
+<%= erb :footer %>
