@@ -2,10 +2,21 @@
 <article id="form">
   <h1>Search History For: <%=h session[:username] %></h1>
   <table>
+    <tr>
+      <th>
+        Search String
+      </th>
+      <th>
+        Date/Something
+      </th>
+    </tr>
     <% @searches.each do |search| %>
         <tr>
           <td>
-            <%=h search[0] %>
+            <a href="/do_search?search=<%=h search[0].gsub(' ', '+') %>"><%=h search[0] %></a>
+          </td>
+          <td>
+            Date Maybe
           </td>
         </tr>
     <% end %>
