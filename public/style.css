@@ -141,6 +141,21 @@ input#sub_button, input.sub_button{
     border: 2px solid #FFF;
 }
 
+/* Rebecca and andreea's stuff */
+div#stat_table{
+    margin: 0 auto;
+    width: 600px;
+}
+
+div#stat_table  th, div#stat_table td{
+    width:200px;
+    text-align: center;
+}
+
+div#campaign_stat_title {
+    text-align: center;
+}
+
 
 /* TWEET BOX BIT */
 

@@ -2,9 +2,30 @@
 <!DOCTYPE html>
 
 <html>
-<head>
-<p>djkansdkjabs</p>
-</head>
+<div id="campaign_stat_title"><h1>Campaign Statistics Page</h1></div>
+<div id="stat_table">
+  <div id="maincontent">
+    <article id="form">
+      <% if @camps.length == 0 then %>
+          <p>No campaigns found!</p>
+      <% else %>
+          <table>
+            <tr>
+              <th><a href="/show_campaigns?order=name">Name</a></th>
+              <th>Retweets</th>
+              <th>Favourites</th>
+            </tr>
+            <tr>
+              <td><%=h params[:name]%></td>
+              <td>23</td>
+              <td>30</td>
+            </tr>
+          </table>
+      <% end %>
+
+    </article>
+  </div>
+</div>
 </html>
 
 <%= erb :footer %>
