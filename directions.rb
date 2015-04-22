@@ -85,17 +85,6 @@ get '/show_campaigns' do
   erb :show_campaigns
 end
 
-get '/messages' do
-
-  redirect '/' unless session[:logged_in]
-
-  # Get direct messages from the client
-  @direct_messages = @client.direct_messages
-
-  @title = 'My Direct Messages'
-  erb :direct_messages
-end
-
 get '/campaign' do
   @title = 'Create a campaign'
   erb :campaigns
@@ -107,9 +96,18 @@ post '/show_campaigns' do
   erb :show_campaigns
 end
 
-get '/show-history' do
-  query = 'SELECT search FROM searches WHERE username = ?';
-  @searches = @db.execute(query, session[:username])
+get '/campaign_stat' do
 
-  erb :show_history
+  #simple select
+  if params[:order] != nil then
+    query = "SELECT name FROM campaigns ORDER BY #{params[:order]}"
+  else
+    query = 'SELECT name FROM campaigns'
+  end
+
+  # Send user and campaign results to show_campaigns page FIXXXX
+  @camps = @db.execute(query)
+
+  @title = 'Campaigns status'
+  erb :campaign_stat
 end
