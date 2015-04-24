@@ -16,14 +16,13 @@
         </tr>
         <% @camps.each do |campaign| %>
             <tr>
-              <!-- Fix this shit -->
-              <td><img src="/images/delete.png" height="25" width="25" onclick="function(){
-                                                                                          $('camp').val('<%= campaign[3] %>');
-                                                                                          $('delete_form').submit();
-                                                                                          }"/></td>
-              <td><a href="/campaign_stat?order=name&name=<%=h campaign[0].gsub(' ', '+') %>"><%=h campaign[0]%></a></td>
-              <td><%=h campaign[1]%></td>
-              <td><%=h campaign[2]%></td>
+              <form action="/show_campaigns" method="post">
+                <input name="campaign_id" type="hidden" value="<%=h campaign[3] %>" />
+                <td><input type="submit" class="delete-button" value="" /></td>
+                <td><a href="/campaign_stat?order=name&name=<%=h campaign[0].gsub(' ', '+') %>"><%=h campaign[0]%></a></td>
+                <td><%=h campaign[1]%></td>
+                <td><%=h campaign[2]%></td>
+              </form>
             </tr>
         <% end %>
       </table>

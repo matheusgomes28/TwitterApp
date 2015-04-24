@@ -86,15 +86,20 @@ get '/show_campaigns' do
   erb :show_campaigns
 end
 
+#Code to delete a campaign off the db
+post '/show_campaigns' do
+
+  # Simple sql stuff
+  query = 'DELETE FROM campaigns WHERE id = ?'
+  @db.execute(query, [params[:campaign_id]])
+
+  # redirect back to get show_campaigns
+  redirect '/show_campaigns'
+end
+
 get '/campaign' do
   @title = 'Create a campaign'
   erb :campaigns
-end
-
-post '/show_campaigns' do
-  query = 'DELETE FROM campaigns WHERE id = ?';
-  @db.execute(query, params[:id])
-  erb :show_campaigns
 end
 
 get '/campaign_stat' do
