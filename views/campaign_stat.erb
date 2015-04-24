@@ -11,7 +11,7 @@
       <% else %>
           <table>
             <tr>
-              <th><a href="/show_campaigns?order=name">Name</a></th>
+              <th><a href="/show_campaigns">Name</a></th>
               <th>Retweets</th>
               <th>Favourites</th>
             </tr>
@@ -21,6 +21,28 @@
               <td>30</td>
             </tr>
           </table>
+
+          <div id="follow_table">
+          <table>
+            <tr>
+              <th>Username</th>
+              <th>Tweet</th>
+              <th>Retweets & Favourites</th>
+              <th>Follow</th>
+            </tr>
+            <tr>
+              <% @username.each do |tweet| %>
+              <td><%=h tweet.user.screen_name %><br />
+                <img alt="image" src="<%= tweet.user.profile_image_uri.to_s %>" /></td>
+              <td>tweet something in here</td>
+              <td> 23 30</td>
+
+              <td><div ="follow_button"><img src="/images/follow.png" height="30" width="80" onclick="function(){
+                      }"/></div></td>
+
+            </tr>
+          </table>
+          </div>
       <% end %>
 
     </article>

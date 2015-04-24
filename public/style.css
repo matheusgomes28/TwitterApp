@@ -156,16 +156,6 @@ div#campaign_stat_title {
     text-align: center;
 }
 
-/* CAMPAIGNS PAGE */
-.delete-button{
-    background: url('/images/delete.png') no-repeat;
-    background-size: 25px 25px;
-    border: none;
-    width: 25px;
-    height: 25px;
-    cursor: pointer;
-}
-
 
 /* TWEET BOX BIT */
 
