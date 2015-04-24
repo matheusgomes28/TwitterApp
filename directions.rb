@@ -61,7 +61,7 @@ post '/campaign' do
 
   # Execute strings and prepare query
   @db.execute(query, [params[:name], params[:desc], params[:keyword], session[:username]])
-  @client.update(params[:desc] + params[:keyword])
+  @client.update(params[:desc] + ' '+params[:keyword])
 
   # redirect user to campaign page
   @submitted = true
