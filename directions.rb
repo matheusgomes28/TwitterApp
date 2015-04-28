@@ -57,11 +57,11 @@ end
 # When a campaign is being created
 post '/campaign' do
 
-  query = 'INSERT INTO campaigns(name, desc, keyword, username) VALUES(?, ?, ?, ?)'
+  query = 'INSERT INTO campaigns(id, name, desc, keyword, username) VALUES(?, ?, ?, ?, ?)'
+  tweet = @client.update params[:desc]+' '+params[:keyword]
 
   # Execute strings and prepare query
-  @db.execute(query, [params[:name], params[:desc], params[:keyword], session[:username]])
-  @client.update(params[:desc] + params[:keyword])
+  @db.execute(query, [tweet.id, params[:name], params[:desc], params[:keyword], session[:username]])
 
   # redirect user to campaign page
   @submitted = true
@@ -93,7 +93,7 @@ end
 
 post '/show_campaigns' do
   query = 'DELETE FROM campaigns WHERE id = ?';
-  @db.execute(query, params[:id])
+  @db.execute(query, params[:campaign_id])
   erb :show_campaigns
 end
 
