@@ -94,7 +94,8 @@ end
 post '/show_campaigns' do
   query = 'DELETE FROM campaigns WHERE id = ?';
   @db.execute(query, params[:campaign_id])
-  erb :show_campaigns
+
+  redirect '/show_campaigns' #Go to get page
 end
 
 get '/campaign_stat' do
@@ -106,7 +107,7 @@ get '/campaign_stat' do
   query = 'SELECT name, desc, keyword FROM campaigns WHERE id = ?'
   campaign = @db.execute(query, [params[:id]])
 
-  # Get a tweet list containing recent search results
+  # Get a tweet list containing search results
   @search_list = @client.search(campaign[0][2]).take(10)
 
   @title = campaign[0][0]

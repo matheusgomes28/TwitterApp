@@ -157,6 +157,17 @@ div#campaign_stat_title {
 }
 
 
+/* Delete button for campaigns */
+
+.delete-button{
+    height: 30px;
+    width: 30px;
+    border: none;
+    background: url('images/delete.png') no-repeat;
+    background-size: 30px 30px;
+}
+
+
 /* TWEET BOX BIT */
 
 div#tweetbox {
