@@ -6,47 +6,45 @@
 <div id="stat_table">
   <div id="maincontent">
     <article id="form">
-      <% if @camps.length == 0 then %>
-          <p>No campaigns found!</p>
-      <% else %>
-          <table>
-            <tr>
-              <th><a href="/show_campaigns">Name</a></th>
-              <th>Retweets</th>
-              <th>Favourites</th>
-            </tr>
-            <tr>
-              <td><%=h params[:name]%></td>
-              <td>23</td>
-              <td>30</td>
-            </tr>
+      <table>
+        <tr>
+          <th><a href="/show_campaigns">Name</a></th>
+          <th>Retweets</th>
+          <th>Favourites</th>
+        </tr>
+        <tr>
+          <td><%=h params[:name]%></td>
+          <td>23</td>
+          <td>30</td>
+        </tr>
+      </table>
+
+      <div id="follow_table">
+        <table>
+          <tr>
+            <th>Username</th>
+            <th>Tweet</th>
+            <th>Retweets & Favourites</th>
+            <th>Follow</th>
+          </tr>
+          <% @search_list.each do |tweet| %>
+              <tr>
+                <td><%=h tweet.user.screen_name %><br />
+                  <img alt="image" src="<%= tweet.user.profile_image_uri.to_s %>" /></td>
+                <td><%=h tweet.text %></td>
+                <td><%= tweet.retweet_count.to_s+' '+tweet.favorite_count.to_s %></td>
+
+                <td><div ="follow_button"><img src="/images/follow.png" height="30" width="80" onclick="function(){
+                        }"/></div>
+              </td>
+
+              </tr>
+          <% end %>
           </table>
-
-          <div id="follow_table">
-          <table>
-            <tr>
-              <th>Username</th>
-              <th>Tweet</th>
-              <th>Retweets & Favourites</th>
-              <th>Follow</th>
-            </tr>
-            <tr>
-              <% @username.each do |tweet| %>
-              <td><%=h tweet.user.screen_name %><br />
-                <img alt="image" src="<%= tweet.user.profile_image_uri.to_s %>" /></td>
-              <td>tweet something in here</td>
-              <td> 23 30</td>
-
-              <td><div ="follow_button"><img src="/images/follow.png" height="30" width="80" onclick="function(){
-                      }"/></div></td>
-
-            </tr>
-          </table>
-          </div>
-      <% end %>
-
-    </article>
   </div>
+
+  </article>
+</div>
 </div>
 </html>
 

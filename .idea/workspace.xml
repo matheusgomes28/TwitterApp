@@ -2,15 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d5dc3dc-502f-42f3-a2ec-044fc139bb9f" name="Default" comment="">
+      <change type="DELETED" beforePath="C:\Users\Matheus\Desktop\project\login.db" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/campaign_stat.erb" afterPath="$PROJECT_DIR$/views/campaign_stat.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/directions.rb" afterPath="$PROJECT_DIR$/directions.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/project.iml" afterPath="$PROJECT_DIR$/.idea/project.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/style.css" afterPath="$PROJECT_DIR$/public/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/show_campaigns.erb" afterPath="$PROJECT_DIR$/views/show_campaigns.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="project.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,10 +21,10 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/project@IRB_console__project.coverage" NAME="IRB console: project Coverage Results" MODIFIED="1429017804503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="project" />
-    <SUITE FILE_PATH="coverage/project@control.coverage" NAME="control Coverage Results" MODIFIED="1429701256935" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="project" />
     <SUITE FILE_PATH="coverage/project@All_tests_in_project__project.coverage" NAME="All tests in project: project Coverage Results" MODIFIED="1424463138265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="project" />
     <SUITE FILE_PATH="coverage/project@useful_functions.coverage" NAME="useful_functions Coverage Results" MODIFIED="1429302474732" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="project" />
+    <SUITE FILE_PATH="coverage/project@control.coverage" NAME="control Coverage Results" MODIFIED="1430232331512" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="project" />
+    <SUITE FILE_PATH="coverage/project@IRB_console__project.coverage" NAME="IRB console: project Coverage Results" MODIFIED="1429017804503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="project" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -36,17 +38,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="control.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="control.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/control.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="4" max-vertical-offset="952">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user_settings.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="user_settings.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/user_settings.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="612">
@@ -56,27 +58,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="directions.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="directions.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/directions.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.24" vertical-offset="1211" max-vertical-offset="2159">
-              <caret line="101" column="16" selection-start-line="101" selection-start-column="13" selection-end-line="101" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.6246106" vertical-offset="1401" max-vertical-offset="2159">
+              <caret line="106" column="43" selection-start-line="106" selection-start-column="43" selection-end-line="106" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show_history.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="show_history.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/show_history.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="510">
+            <state vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="510">
               <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="header.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/header.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="213" max-vertical-offset="816">
@@ -86,17 +88,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="campaign_stat.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="campaign_stat.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/campaign_stat.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.49721295" vertical-offset="64" max-vertical-offset="986">
-              <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
+            <state vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="952">
+              <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/style.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="3420" max-vertical-offset="4420">
@@ -106,17 +108,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show_campaigns.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="show_campaigns.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/show_campaigns.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="748">
-              <caret line="23" column="43" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
+            <state vertical-scroll-proportion="-9.653846" vertical-offset="106" max-vertical-offset="748">
+              <caret line="21" column="57" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="home.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/home.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="697">
@@ -138,12 +140,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
-    <option name="changedFiles">
+    <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/views/show_campaigns.erb" />
-        <option value="$PROJECT_DIR$/views/header.erb" />
         <option value="$PROJECT_DIR$/views/campaign_stat.erb" />
-        <option value="$PROJECT_DIR$/public/style.css" />
+        <option value="$PROJECT_DIR$/views/show_campaigns.erb" />
+        <option value="$PROJECT_DIR$/directions.rb" />
       </list>
     </option>
   </component>
@@ -182,7 +183,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -231,6 +231,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -416,6 +417,9 @@
       <IRB_RUN_CONFIG NAME="IS_RAILS_CONSOLE" VALUE="false" />
       <method />
     </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
     <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.All tests in project: project" />
       <item index="1" class="java.lang.String" itemvalue="Ruby.control" />
@@ -424,9 +428,9 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Ruby.useful_functions" />
-        <item index="1" class="java.lang.String" itemvalue="IRB console.IRB console: project" />
-        <item index="2" class="java.lang.String" itemvalue="Ruby.control" />
+        <item index="0" class="java.lang.String" itemvalue="Ruby.control" />
+        <item index="1" class="java.lang.String" itemvalue="Ruby.useful_functions" />
+        <item index="2" class="java.lang.String" itemvalue="IRB console.IRB console: project" />
         <item index="3" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.All tests in project: project" />
       </list>
     </recent_temporary>
@@ -439,91 +443,120 @@
     <task active="true" id="Default" summary="Default task">
       <changelist id="2d5dc3dc-502f-42f3-a2ec-044fc139bb9f" name="Default" comment="" />
       <created>1424182141930</created>
+      <option name="number" value="Default" />
       <updated>1424182141930</updated>
     </task>
     <task id="LOCAL-00001" summary="Added pages to create campaigns and to show all the campaigns. Also did some work on the database, although it's not yet normalised,  I applied some common sense to split some tables up so that the data is less redundant.">
       <created>1425935563047</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
       <updated>1425935563047</updated>
     </task>
     <task id="LOCAL-00002" summary="Added pages to create campaigns and to show all the campaigns. Also did some work on the database, although it's not yet normalised,  I applied some common sense to split some tables up so that the data is less redundant.">
       <created>1425996368788</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
       <updated>1425996368788</updated>
     </task>
     <task id="LOCAL-00003" summary="Added pages to create campaigns and to show all the campaigns. Also did some work on the database, although it's not yet normalised,  I applied some common sense to split some tables up so that the data is less redundant.">
       <created>1425996413718</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
       <updated>1425996413718</updated>
     </task>
     <task id="LOCAL-00004" summary="Added simple settings page. User will then be able to change his/her details.">
       <created>1426013853841</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
       <updated>1426013853841</updated>
     </task>
     <task id="LOCAL-00005" summary="Added simple settings page. User will then be able to change his/her details.">
       <created>1426013865022</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
       <updated>1426013865022</updated>
     </task>
     <task id="LOCAL-00006" summary="Added direct messages page, as well as starting the ordering of campaigns requested by the user - this is not yet finished but shouldn't be hard to fix. I'll finish it off when I find a solution to a problem I'm encountering.">
       <created>1426022403129</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
       <updated>1426022403129</updated>
     </task>
     <task id="LOCAL-00007" summary="Improve the aesthetics of the website by adding icons and some other stuff. Each page has an unique title now, in addition, I started working on the deletions of campaigns (not finished but shouldn't take more than a couple of hours to finish it).">
       <created>1426280642528</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
       <updated>1426280642528</updated>
     </task>
     <task id="LOCAL-00008" summary="Improve the aesthetics of the website by adding icons and some other stuff. Each page has an unique title now, in addition, I started working on the deletions of campaigns (not finished but shouldn't take more than a couple of hours to finish it).">
       <created>1426280648947</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
       <updated>1426280648947</updated>
     </task>
     <task id="LOCAL-00009" summary="Started refractoring code and rewriting stuff to make it more readable and more efficient. More importantly, slitting the controller up into multiple files to make code more cohesive.">
       <created>1429302608820</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
       <updated>1429302608820</updated>
     </task>
     <task id="LOCAL-00010" summary="Second refractoring commit. Now main control has been split into multiple files.">
       <created>1429308957907</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
       <updated>1429308957907</updated>
     </task>
     <task id="LOCAL-00011" summary="Finished the &quot;saving history&quot; criteria - searches are saved into the database if user chooses to. Also added the tweet box (not functional yet) - work done by Andreea and Becca.">
       <created>1429545328600</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
       <updated>1429545328600</updated>
     </task>
     <task id="LOCAL-00012" summary="Finished the &quot;saving history&quot; criteria - searches are saved into the database if user chooses to. Also added the tweet box (not functional yet) - work done by Andreea and Becca.">
       <created>1429545340822</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
       <updated>1429545340822</updated>
     </task>
     <task id="LOCAL-00013" summary="Added &quot;View Search history&quot; page where user can see the earches he has saved.">
       <created>1429697326349</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
       <updated>1429697326349</updated>
     </task>
     <task id="LOCAL-00014" summary="Added &quot;View Search history&quot; page where user can see the earches he has saved.">
       <created>1429698672562</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
       <updated>1429698672562</updated>
     </task>
     <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299075" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24947916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.311408" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.327852" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31210855" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299075" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -561,6 +594,7 @@
       </breakpoints>
       <option name="time" value="7" />
     </breakpoint-manager>
+    <watches-manager />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/public/style.css">
@@ -871,22 +905,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/show_history.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="510">
-          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/control.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4" max-vertical-offset="952">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/header.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="213" max-vertical-offset="816">
@@ -903,10 +921,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/show_campaigns.erb">
+    <entry file="file://$PROJECT_DIR$/control.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="748">
-          <caret line="23" column="43" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="4" max-vertical-offset="952">
+          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -919,22 +937,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/directions.rb">
+    <entry file="file://$PROJECT_DIR$/views/show_history.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.24" vertical-offset="1211" max-vertical-offset="2159">
-          <caret line="101" column="16" selection-start-line="101" selection-start-column="13" selection-end-line="101" selection-end-column="16" />
+        <state vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="510">
+          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/show_campaigns.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.653846" vertical-offset="106" max-vertical-offset="748">
+          <caret line="21" column="57" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/campaign_stat.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49721295" vertical-offset="64" max-vertical-offset="986">
-          <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
+        <state vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="952">
+          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/directions.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6246106" vertical-offset="1401" max-vertical-offset="2159">
+          <caret line="106" column="43" selection-start-line="106" selection-start-column="43" selection-end-line="106" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
   </component>
 </project>
-
