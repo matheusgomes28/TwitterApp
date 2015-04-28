@@ -30,17 +30,19 @@
               <th>Retweets & Favourites</th>
               <th>Follow</th>
             </tr>
+            <% @username.each do |tweet| %>
             <tr>
-              <% @username.each do |tweet| %>
               <td><%=h tweet.user.screen_name %><br />
                 <img alt="image" src="<%= tweet.user.profile_image_uri.to_s %>" /></td>
               <td>tweet something in here</td>
               <td> 23 30</td>
 
               <td><div ="follow_button"><img src="/images/follow.png" height="30" width="80" onclick="function(){
-                      }"/></div></td>
+                      }"/></div>
+                </td>
 
             </tr>
+            <% end %>
           </table>
           </div>
       <% end %>

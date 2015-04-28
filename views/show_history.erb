@@ -1,6 +1,7 @@
 <%= erb :header %>
 <article id="form">
   <h1>Search History For: <%=h session[:username] %></h1>
+  <div id="search_table">
   <table>
     <tr>
       <th>
@@ -21,5 +22,6 @@
         </tr>
     <% end %>
   </table>
+  </div>
 </article>
 <%= erb :footer %>

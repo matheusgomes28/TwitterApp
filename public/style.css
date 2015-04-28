@@ -156,6 +156,20 @@ div#campaign_stat_title {
     text-align: center;
 }
 
+div#follow_table th, div#follow_table td{
+    width: 200px;
+    text-align: center;
+}
+
+div#show_table th, div#show_table td{
+    width: 200px;
+    text-align: center;
+}
+
+div#search_table th, div#search_table td{
+    width: 200px;
+    text-align: center;
+}
 
 /* TWEET BOX BIT */
 
