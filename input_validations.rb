@@ -11,7 +11,7 @@ require_relative('useful_functions')
 # The validation page...
 post '/login_validate' do
 
-  if !is_valid_username(params[:username]) then
+  if !is_valid_username(@db, params[:username]) then
 
     # Get the unique*** password hash from the db
     password = @db.execute("SELECT password FROM users WHERE username='#{params[:username]}'")[0][0]
@@ -47,9 +47,9 @@ post '/register_validate' do
   if params[:cPassword] == params[:password] then
 
     # Check is username is valid
-    if is_valid_username(params[:username]) then
+    if is_valid_username(@db, params[:username]) then
 
-      if !is_email_taken(params[:email]) then
+      if !is_email_taken(@db, params[:email]) then
         passDigest = @md5.hexdigest(params[:password])
 
         # Insert user details into database

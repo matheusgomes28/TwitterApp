@@ -5,7 +5,19 @@
 <!-- WEBSITE ARTICLES -->
 <div id="maincontent">
   <article id="form">
-    <form action="validate" method="post" >
+    <% if @success == nil then %>
+        <h1>Change your details.</h1>
+    <% else %>
+        <% if @success == false then %>
+            <h1>Wrong inputs entered, errors:</h1>
+            <p><%=h @errors %></p>
+        <% else %>
+            <h1>Successfully changed your details!</h1>
+        <% end %>
+    <% end %>
+
+    <form action="/settings_validate" method="post" >
+      <input type="hidden" value="1" name="tried" />
       <table>
         <tr>
           <td>Username: </td>
@@ -13,38 +25,43 @@
         </tr>
 
         <tr>
-          <td>Password: </td>
-          <td><input type="password" size="20" name="password" value="<%=h @password %>"/></td>
+          <td>Current Password: </td>
+          <td><input type="password" size="20" name="oldPassword" value=""/></td>
+        </tr>
+
+        <tr>
+          <td>New Password: </td>
+          <td><input type="password" size="20" name="newPassword" value=""/></td>
         </tr>
 
         <tr>
           <td>Email: </td>
-          <td><input type="text" size="20" name="email" value="<%=h @email %>"/></td>
+          <td><input type="text" size="20" name="email" value=""/></td>
         </tr>
 
         <tr>
           <td>Twitter: </td>
-          <td><input type="text" size="20" name="twitter" value="<%=h @twitter %>"/></td>
+          <td><input type="text" size="20" name="twitter" value=""/></td>
         </tr>
 
         <tr>
           <td>Consumer Key: </td>
-          <td><input type="text" size="20" name="consumer_key" value="<%=h @c_key %>"/></td>
+          <td><input type="text" size="20" name="consumer_key" value=""/></td>
         </tr>
 
         <tr>
           <td>Consumer Secret: </td>
-          <td><input type="text" size="20" name="consumer_secret" value="<%=h @c_secret %>"/></td>
+          <td><input type="text" size="20" name="consumer_secret" value=""/></td>
         </tr>
 
         <tr>
           <td>Access Token: </td>
-          <td><input type="text" size="20" name="access_token" value="<%=h @access_token %>"/></td>
+          <td><input type="text" size="20" name="access_token" value=""/></td>
         </tr>
 
         <tr>
           <td>Consumer Key: </td>
-          <td><input type="text" size="20" name="access_token_secret" value="<%=h @access_token_s %>"/></td>
+          <td><input type="text" size="20" name="access_token_secret" value=""/></td>
         </tr>
 
         <tr>
