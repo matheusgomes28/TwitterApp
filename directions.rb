@@ -105,12 +105,15 @@ get '/campaign_stat' do
 
   #Query to get campaign info
   query = 'SELECT name, desc, keyword FROM campaigns WHERE id = ?'
-  campaign = @db.execute(query, [params[:id]])
+  @campaign = @db.execute(query, [params[:id]])
 
   # Get a tweet list containing search results
-  @search_list = @client.search(campaign[0][2]).take(10)
+  @search_list = @client.search(@campaign[0][2]).take(10)
 
-  @title = campaign[0][0]
+  # Get the tweet sent out when making the campaign
+  @tweet = @client.status(params[:id])
+
+  @title = @campaign[0][0]
   erb :campaign_stat
 end
 

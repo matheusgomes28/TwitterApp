@@ -147,17 +147,17 @@ div#stat_table{
     width: 600px;
 }
 
-div#stat_table  th, div#stat_table td{
-    width:200px;
-    text-align: center;
-}
-
 div#campaign_stat_title {
     text-align: center;
 }
 
+div#stat_table  th, div#stat_table td{
+    width: 300px;
+    text-align: center;
+}
+
 div#follow_table th, div#follow_table td{
-    width: 200px;
+    width: 300px;
     text-align: center;
 }
 
@@ -169,6 +169,16 @@ div#show_table th, div#show_table td{
 div#search_table th, div#search_table td{
     width: 200px;
     text-align: center;
+}
+
+div#like_tweet{
+    border: solid #A3C8FF 3px;
+    background-color: #EAF2FF;
+    border-radius: 8px;
+}
+
+img#user_image{
+    margin: 5px;
 }
 
 /* Delete button for campaigns */
