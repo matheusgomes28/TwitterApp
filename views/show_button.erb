@@ -1,0 +1,20 @@
+<html style="margin: 0; padding: 0;">
+<head></head>
+
+<body style="margin: 0; padding: 0;">
+    <% if @followed == '0' then%>
+        <a href="/follow?user=<%=h @twitter_name %>">
+          <img src="/images/follow.png" height="<%=h params[:height] %>" width="<%=h params[:width] %>" />
+        </a>
+    <% else %>
+        <a href="/unfollow?user=<%=h @twitter_name %>">
+          <img src="/images/unfollow.png" height="<%=h params[:height] %>" width="<%=h params[:width] %>" />
+        </a>
+    <% end %>
+
+    <form action="">
+
+    </form>
+</body>
+
+</html>

@@ -3,6 +3,9 @@
 # other parts of the system that may require
 # user inputs and validation.
 
+# FIXXXXXXXX THE SQL STATEMENTS
+
+
 require 'sqlite3'
 require 'digest'
 

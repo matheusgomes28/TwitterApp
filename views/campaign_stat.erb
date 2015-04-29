@@ -45,8 +45,17 @@
                 <td><%=h tweet.text %></td>
                 <td><%= tweet.retweet_count.to_s+' '+tweet.favorite_count.to_s %></td>
 
-                <td><div ="follow_button"><img src="/images/follow.png" height="30" width="80" onclick="function(){
-                        }"/></div>
+                <!-- MAKE THIS LOOK NICE -->
+                <td>
+                  <% if @client.friendship?(@client, tweet.user) then %>
+                      <div>
+                        <iframe scrolling="no" style="border: none; width: 70px; height: 30px; margin: 0; padding: 0;" src="/show_button?user=<%=h tweet.user.screen_name %>&followed=1&height=30&width=70"></iframe>
+                      </div>
+                  <% else %>
+                      <div>
+                        <iframe scrolling="no" style="border: none; width: 70px; height: 30px; margin: 0; padding: 0;" src="/show_button?user=<%=h tweet.user.screen_name %>&followed=0&height=30&width=70"></iframe>
+                      </div>
+                  <% end %>
               </td>
 
               </tr>
