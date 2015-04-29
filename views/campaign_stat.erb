@@ -3,22 +3,33 @@
 
 <html>
 <div id="campaign_stat_title"><h1>Campaign Statistics Page</h1></div>
-<div id="stat_table">
   <div id="maincontent">
     <article id="form">
+      <!-- Table to show the tweet sent out when creating a campaign, the campaign name and the number
+           of retweets and favourites for that tweet -->
+      <div id="stat_table">
       <table>
         <tr>
-          <th><a href="/show_campaigns">Name</a></th>
+          <th>Tweet</th>
+          <th><a href="/show_campaigns">Campaign Name</a></th>
           <th>Retweets</th>
           <th>Favourites</th>
         </tr>
         <tr>
-          <td><%=h params[:name]%></td>
-          <td>23</td>
-          <td>30</td>
+          <td><div id="like_tweet">
+            <img id="user_image" alt="image" src="<%= @tweet.user.profile_image_uri.to_s %>" />
+            @<%=h @tweet.user.screen_name %><br/>
+            "<%=h @tweet.text %>"</td>
+            </div>
+          <td><%=h @campaign[0][0]%></td>
+          <td><%=h @tweet.retweet_count%></td>
+          <td><%=h @tweet.favorite_count%></td>
         </tr>
       </table>
+      </div>
 
+      <!-- Table to show the usernames and tweets of people who have tweeted using the campaign keyword
+           and a button to follow them -->
       <div id="follow_table">
         <table>
           <tr>
@@ -29,7 +40,7 @@
           </tr>
           <% @search_list.each do |tweet| %>
               <tr>
-                <td><%=h tweet.user.screen_name %><br />
+                <td>@<%=h tweet.user.screen_name %><br />
                   <img alt="image" src="<%= tweet.user.profile_image_uri.to_s %>" /></td>
                 <td><%=h tweet.text %></td>
                 <td><%= tweet.retweet_count.to_s+' '+tweet.favorite_count.to_s %></td>
@@ -44,7 +55,6 @@
   </div>
 
   </article>
-</div>
 </div>
 </html>
 
