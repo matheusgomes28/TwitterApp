@@ -124,3 +124,26 @@ get '/show-history' do
   erb :show_history
 
 end
+
+
+get '/follow' do
+  puts 'passed follow'
+  puts params[:user]
+  @client.follow(params[:user])
+  redirect "/show_button?user=#{params[:user]}&followed=1&height=30&width=70"
+end
+
+get '/unfollow' do
+  puts 'passed ufollow'
+  @client.unfollow(params[:user])
+  redirect "/show_button?user=#{params[:user]}&followed=0&height=30&width=70"
+end
+
+get '/show_button' do
+  @followed = params[:followed]
+  @height = params[:height]
+  @width = params[:width]
+  @twitter_name = params[:user]
+
+  erb :show_button
+end

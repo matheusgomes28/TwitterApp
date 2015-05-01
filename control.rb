@@ -8,6 +8,7 @@ include ERB::Util
 require_relative('directions')
 require_relative('user_settings')
 require_relative('input_validations')
+require_relative('follow_unfollow')
 
 #Enable sessions for login system
 enable :sessions
