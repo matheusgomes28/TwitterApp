@@ -122,7 +122,7 @@ get '/show-history' do
   query = 'SELECT search FROM searches WHERE username = ?';
   @searches = @db.execute(query, session[:username])
   erb :show_history
-
+  
 end
 
 
@@ -149,4 +149,5 @@ get '/show_button' do
   @twitter_name = params[:user]
 
   erb :show_button
+
 end

@@ -20,13 +20,18 @@
             <img id="user_image" alt="image" src="<%= @tweet.user.profile_image_uri.to_s %>" />
             @<%=h @tweet.user.screen_name %><br/>
             "<%=h @tweet.text %>"</td>
-            </div>
-          <td><%=h @campaign[0][0]%></td>
-          <td><%=h @tweet.retweet_count%></td>
-          <td><%=h @tweet.favorite_count%></td>
-        </tr>
-      </table>
-      </div>
+    </div>
+    <td><%=h @campaign[0][0]%></td>
+    <td><%=h @tweet.retweet_count%></td>
+    <td><%=h @tweet.favorite_count%></td>
+    </tr>
+    </table>
+</div>
+<form action="/automatic_follow" method="get" >
+  <input type="hidden" name="id" value="<%=h @tweet.id %>" />
+  <input type="hidden" name="keyword" value="<%=h @campaign[0][2] %>" />
+  <input type="submit" value="Automatically Follow" class="sub_button" />
+</form>
 
       <!-- Table to show the usernames and tweets of people who have tweeted using the campaign keyword
            and a button to follow them -->
