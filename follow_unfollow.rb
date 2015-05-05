@@ -35,3 +35,20 @@ get '/automatic_follow' do
   # Redirect back to campaign page
   redirect "/campaign_stat?id=#{params[:id]}"
 end
+
+
+# This is where the code for the
+# unfollow page goes.
+get '/show_followers' do
+
+  first_follower = params[:last_id]
+
+  puts first_follower == nil
+
+  @followers = first_follower == nil ? @client.followers().take(10) : @client.followers(:max_id => first_follower).take(10)
+
+  @followers.each do |user|
+    puts user.id
+  end
+  erb :show_followers
+end
