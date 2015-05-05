@@ -142,6 +142,21 @@ input#sub_button, input.sub_button{
 }
 
 /* Rebecca and andreea's stuff */
+
+/* SERACH TABLE */
+div#search_table th, div#search_table td{
+    width: 200px;
+    text-align: center;
+}
+
+/* SHOW CAMPAIGNS TABLE */
+div#show_table th, div#show_table td{
+    width: 200px;
+    text-align: center;
+}
+
+/* CAMPAIGN STAT PAGE */
+/* STAT TABLE */
 div#stat_table{
     margin: 0 auto;
     width: 600px;
@@ -156,21 +171,33 @@ div#stat_table  th, div#stat_table td{
     text-align: center;
 }
 
+/* AUTO FOLLOW BUTTON */
+#auto_follow{
+    display: block;
+    margin: 0 auto;
+}
+
+/* FOLLOW TABLE */
+div#follow_table{
+    margin: 0 auto;
+    width: 800px;
+    padding-top: 10px;
+}
+
+div#follow_table td{
+    padding-bottom: 20px;
+}
+
 div#follow_table th, div#follow_table td{
-    width: 300px;
+    width: 250px;
     text-align: center;
 }
 
-div#show_table th, div#show_table td{
-    width: 200px;
-    text-align: center;
+div#each_line{
+    padding: 5px;
 }
 
-div#search_table th, div#search_table td{
-    width: 200px;
-    text-align: center;
-}
-
+/* USERS CAMPAIGN TWEET */
 div#like_tweet{
     border: solid #A3C8FF 3px;
     background-color: #EAF2FF;
@@ -178,8 +205,17 @@ div#like_tweet{
 }
 
 img#user_image{
+    padding-left: 7px;
     margin: 5px;
+    float: left;
 }
+
+div#user_name{
+    padding-top: 20px;
+    padding-bottom: 30px;
+    font-weight: bold;
+}
+
 
 /* Delete button for campaigns */
 
