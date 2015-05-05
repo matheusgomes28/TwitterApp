@@ -8,3 +8,4 @@ gem 'cucumber'
 gem 'capybara'
 gem 'rspec'
 gem 'simplecov'
+gem "gherkin"

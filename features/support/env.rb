@@ -1,16 +1,14 @@
 require 'capybara'
 require 'rspec'
 require 'capybara/cucumber'
-require 'sinatra'
 
 ## Uncomment to enable SimpleCov
-require 'simplecov'
+#require 'simplecov'
 
-SimpleCov.start do
-  add_filter 'features/'
-end
+#SimpleCov.start do
+#  add_filter 'features/'
+#end
 
-## Replace with path to your controller 
 require_relative '../../control'
 
 ENV['RACK_ENV'] = 'test'

@@ -99,6 +99,7 @@ DEPENDENCIES
   capybara
   cucumber
   digest
+  gherkin
   rspec
   simplecov
   sinatra
