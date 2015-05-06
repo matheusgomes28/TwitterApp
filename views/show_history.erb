@@ -8,7 +8,7 @@
         Search String
       </th>
       <th>
-        Date/Something
+        Last Searched
       </th>
     </tr>
     <% @searches.each do |search| %>
@@ -17,7 +17,7 @@
             <a href="/do_search?search=<%=h search[0].gsub(' ', '+') %>"><%=h search[0] %></a>
           </td>
           <td>
-            Date Maybe
+            <%=h string_to_date(search[1]) %>
           </td>
         </tr>
     <% end %>

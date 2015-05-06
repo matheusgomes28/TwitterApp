@@ -129,7 +129,7 @@ end
 
 get '/show-history' do
 
-  query = 'SELECT search FROM searches WHERE username = ?';
+  query = 'SELECT search, date FROM searches WHERE username = ?';
   @searches = @db.execute(query, session[:username])
   erb :show_history
   

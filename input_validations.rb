@@ -8,6 +8,7 @@
 
 require 'sqlite3'
 require 'digest'
+require 'date'
 
 require_relative('useful_functions')
 
@@ -22,11 +23,16 @@ post '/login_validate' do
     # Compares both hashes to see if password is the same
     if password == @md5.hexdigest(params[:password]) then
 
+      # Set sessions needed
       session[:logged_in] = true
       session[:username] = params[:username]
+      session[:login_time] = DateTime.now
+
+      # Add login time session to db
+      query = 'INSERT INTO sessions(username) VALUES(?)'
+      @db.execute(query, [session[:username]])
 
       # Sends to access granted page and creates session
-
       redirect '/home'
 
     else

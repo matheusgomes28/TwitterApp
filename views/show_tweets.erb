@@ -1,6 +1,6 @@
 <%= erb :header %>
 <article id="form">
-  <% if params[:search] == nill || params[:search].chomp == '' then%>
+  <% if params[:search] == nil || params[:search].chomp == '' then%>
     <h1>You haven't searched for anything</h1>
   <% else %>
       <h1>Search for: <%=h params[:search] %></h1>

@@ -1,16 +1,20 @@
 <%= erb :header %>
 <article id="form">
-  <h1>Search for: <%=h params[:search] %></h1>
+  <h1>Friends - People I follow.</h1>
   <table>
     <tr>
-      <th>Id</th>
-      <th>Tweet</th>
+      <th>User</th>
+      <th>Last Tweet</th>
+      <th>Follow/Unfollow</th>
     </tr>
     <% @friends.each do |user| %>
         <tr>
           <td>
             <%=h user.screen_name %><br />
             <img alt="image" src="<%= user.profile_image_uri.to_s %>" />
+          </td>
+          <td>
+            <%=h @client.user_timeline(user)[0].text %>
           </td>
           <td>
             <% if @client.friendship?(@client, user) then %>

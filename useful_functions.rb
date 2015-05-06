@@ -1,4 +1,5 @@
 require 'sqlite3'
+require 'date'
 
 # Check if the username given is a
 # valid username.
@@ -40,4 +41,19 @@ def is_twitter_taken(db, twitter)
   else
     return false
   end
+end
+
+
+# This method will turn a date
+# string returned from the db
+# into a DateTime object
+def string_to_date(db_date)
+
+  # Parse string (db date) to DateTime
+  date = DateTime.strptime(db_date, '%Y-%m-%d %H:%M:%S')
+
+  # Format it to a more readable string
+  string = "#{date.day}/#{date.month}/#{date.year}"
+
+  return string
 end
