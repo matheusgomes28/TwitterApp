@@ -17,7 +17,7 @@ get '/' do
 end
 
 get '/logout' do
-  session.clear
+  session.clear #Clear data in session
   @title = 'Logged out!'
   erb :logout
 end
@@ -30,9 +30,10 @@ end
 
 # The search page
 get '/home' do
-  @title = 'Search page'
+  @title = 'TweetCamp - Home page'
   erb :home
 end
+
 
 get '/do_search' do
 
@@ -42,12 +43,10 @@ get '/do_search' do
   # Get a tweet list containing recent search results
   @search_list = @client.search(params[:search]).take(10)
 
-  puts params[:save_search]
-
+  # Save the search if user requested so
   if params[:save_search] == 'on' then
     query = 'INSERT INTO searches(username, search) VALUES(?, ?);'
     @db.execute(query, [session[:username], params[:search]])
-    puts 'saved search'
   end
 
   @title = 'Showing search results'
@@ -58,7 +57,7 @@ end
 post '/campaign' do
 
   query = 'INSERT INTO campaigns(id, name, desc, keyword, username) VALUES(?, ?, ?, ?, ?)'
-  tweet = @client.update params[:desc]+' '+params[:keyword]
+  tweet = @client.update params[:desc]+' '+params[:keyword] # Tweet camp
 
   # Execute strings and prepare query
   @db.execute(query, [tweet.id, params[:name], params[:desc], params[:keyword], session[:username]])
@@ -72,11 +71,19 @@ end
 
 get '/show_campaigns' do
 
-  #simple select
-  if params[:order] != nil then
-    query = "SELECT name, desc, keyword, id FROM campaigns ORDER BY #{params[:order]}"
-  else
-    query = 'SELECT name, desc, keyword, id FROM campaigns'
+  # Initial query
+  query = 'SELECT name, desc, keyword, id FROM campaigns'
+
+  # Select case for defining the order
+  case params[:order]
+    when 'name'
+      query << ' ORDER BY name;'
+    when 'desc'
+      query << ' ORDER BY desc;'
+    when 'keyword'
+      query << ' ORDER BY keyword;'
+    else
+      query << ';'
   end
 
   # Send user and campaign results to show_campaigns page FIXXXX
@@ -86,12 +93,15 @@ get '/show_campaigns' do
   erb :show_campaigns
 end
 
+
 get '/campaign' do
   @title = 'Create a campaign'
   erb :campaigns
 end
 
 post '/show_campaigns' do
+
+  # Query for deleting a campaign when button clicked
   query = 'DELETE FROM campaigns WHERE id = ?';
   @db.execute(query, params[:campaign_id])
 
@@ -159,3 +169,15 @@ get '/unfollow' do
 
 end
 
+
+not_found do
+  @title = 'Page not found'
+  @error = '404 - page not found'
+  erb :not_found
+end
+
+error do
+  @title = 'Internal server error'
+  @error = 'Internal server error'
+  erb :not_found
+end

@@ -1,0 +1,18 @@
+<%= erb :header %>
+
+
+<!-- WEBSITE ARTICLES -->
+<div id="maincontent">
+  <article id="form">
+    <h1><%=h @error %></h1>
+    <p>
+      <img style="float: left;" src="images/warning.png" height="200" width="200" alt="Warning image" />
+       Please make sure that the link you have requested is the right
+       link. If you keep getting this error (<%=h @error %>, report it
+       to the admin by emailing mdeaguiargomes1@sheffield.ac.uk
+    </p>
+  </article>
+</div>
+
+
+<%= erb :footer %>
