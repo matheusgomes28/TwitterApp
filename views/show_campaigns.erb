@@ -17,9 +17,9 @@
         </tr>
         <% @camps.each do |campaign| %>
             <tr>
-              <form action="/show_campaigns" method="post">
+              <form action="/show_campaigns" name="<%=h campaign[0].gsub(' ', '') %>" method="post">
                 <input name="campaign_id" type="hidden" value="<%=h campaign[3] %>" />
-                <td><input type="submit" class="delete-button" value="" /></td>
+                <td><input type="submit" name="Submit" class="delete-button" value="Submit" /></td>
                 <td><a href="/campaign_stat?order=name&id=<%=h campaign[3] %>"><%=h campaign[0]%></a></td>
                 <td><%=h campaign[1]%></td>
                 <td><%=h campaign[2]%></td>

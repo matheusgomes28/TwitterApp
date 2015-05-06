@@ -1,31 +1,38 @@
 <%= erb :header %>
 <article id="form">
-  <h1>Search for: <%=h params[:search] %></h1>
-  <table>
-    <tr>
-      <th>Id</th>
-      <th>Tweet</th>
-      <th>Follow</th>
-    </tr>
-    <% @search_list.each do |tweet| %>
+  <% if params[:search] == nill || params[:search].chomp == '' then%>
+    <h1>You haven't searched for anything</h1>
+  <% else %>
+      <h1>Search for: <%=h params[:search] %></h1>
+      <% if params[:save_search] == 'on' then %>
+        <h3>Search string was saved!</h3>
+      <% end %>
+      <table>
         <tr>
-          <td>
-            <%=h tweet.user.screen_name %><br />
-            <img alt="image" src="<%= tweet.user.profile_image_uri.to_s %>" />
-          </td>
-          <td><%=h tweet.text%></td>
-          <td>
-            <% if @client.friendship?(@client, tweet.user) then %>
-                <div>
-                  <iframe scrolling="no" style="border: none; width: 70px; height: 30px; margin: 0; padding: 0;" src="/show_button?user=<%=h tweet.user.screen_name %>&followed=1&height=30&width=70"></iframe>
-                </div>
-            <% else %>
-                <div>
-                  <iframe scrolling="no" style="border: none; width: 70px; height: 30px; margin: 0; padding: 0;" src="/show_button?user=<%=h tweet.user.screen_name %>&followed=0&height=30&width=70"></iframe>
-                </div>
-            <% end %></td>
+          <th>Id</th>
+          <th>Tweet</th>
+          <th>Follow</th>
         </tr>
-    <% end %>
-  </table>
+        <% @search_list.each do |tweet| %>
+            <tr>
+              <td>
+                <%=h tweet.user.screen_name %><br />
+                <img alt="image" src="<%= tweet.user.profile_image_uri.to_s %>" />
+              </td>
+              <td><%=h tweet.text%></td>
+              <td>
+                <% if @client.friendship?(@client, tweet.user) then %>
+                    <div>
+                      <iframe scrolling="no" style="border: none; width: 70px; height: 30px; margin: 0; padding: 0;" src="/show_button?user=<%=h tweet.user.screen_name %>&followed=1&height=30&width=70"></iframe>
+                    </div>
+                <% else %>
+                    <div>
+                      <iframe scrolling="no" style="border: none; width: 70px; height: 30px; margin: 0; padding: 0;" src="/show_button?user=<%=h tweet.user.screen_name %>&followed=0&height=30&width=70"></iframe>
+                    </div>
+                <% end %></td>
+            </tr>
+        <% end %>
+      </table>
+  <% end %>
 </article>
 <%= erb :footer %>
