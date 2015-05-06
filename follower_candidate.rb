@@ -1,6 +1,6 @@
 # Class made for calculating
 # a user score to people that
-# are involved with a campign.
+# are involved with a campaign.
 # WRITTEN BY: Matt Gomeszzzzzzzzzz xx
 
 require 'twitter' #Needed for the user and tweet objects
@@ -17,19 +17,28 @@ class FollowerCandidate
     @camp_tweet  = campaign_tweet
   end
 
+
   # This methods simply checks if
   # the user has a profile picture
   # to be used in the user score
   def has_picture?
 
-    # Simple if else check
-    if @candidate.profile_image_uri? then
-      return true
+    # Update if twitter updates the default urls
+    check_directories  = ['default_profile_images']
 
-    else
-      return false
+    # Get info from user's profile image
+    image_url = @candidate.profile_image_uri.to_s
+    dir_list = image_url.split('/')
+
+    # Simple if else to check if image is contained
+    # in the default directory => no profile img
+    check_directories.each do |dir|
+      if dir_list.include? dir then
+        return true
+      end
     end
   end
+
 
 
   # This method checks the activity
@@ -60,10 +69,33 @@ class FollowerCandidate
     final_score = 0 # Starts with no score
 
     # Calculate the points gained from campaign
-    final_score += @camp_tweet.favorite_count*FAVORITE_SCORE
-    final_score += @camp_tweet.retweet_count*RETWEET_SCORE
+    if @camp_tweet != nil then
+      final_score += @camp_tweet.favorite_count*FAVORITE_SCORE
+      final_score += @camp_tweet.retweet_count*RETWEET_SCORE
+    end
 
     return final_score
+  end
+
+
+  # This methods calculates the overall
+  # score for following or unfollowing
+  # a user.
+  def calculate_score
+
+    # Default score
+    score = 0
+
+    # Extra points for picture
+    if has_picture? then
+      score += 5
+    end
+
+    score += (5 - last_active) # score for being active
+    score += campaign_score  # Calculate score on certain camp
+
+
+    return score
   end
 
 

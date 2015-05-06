@@ -2,6 +2,7 @@ require_relative('follower_candidate')
 
 
 WHITE_LIST_SCORE = 11
+BLACK_LIST_SCORE = 6
 
 get '/automatic_follow' do
 
@@ -13,20 +14,10 @@ get '/automatic_follow' do
 
     # Create a possible new follower and init score
     candidate = FollowerCandidate.new(@client, tweet.user, tweet)
-    score = 0
-
-    # Extra points for profile pic
-    if candidate.has_picture? then
-      score += 5
-    end
-
-    score += (5 - candidate.last_active) # score for being active
-    score += candidate.campaign_score  # Calculate score on certain camp
-
+    score = candidate.calculate_score
 
     # Follows if candidate fills criteria
     if score > WHITE_LIST_SCORE then
-      puts 'Followed +1'
       @client.follow(tweet.user)
     end
 
@@ -39,16 +30,43 @@ end
 
 # This is where the code for the
 # unfollow page goes.
-get '/show_followers' do
+get '/show_friends' do
 
   first_follower = params[:last_id]
 
   puts first_follower == nil
 
-  @followers = first_follower == nil ? @client.followers().take(10) : @client.followers(:max_id => first_follower).take(10)
+  @friends = first_follower == nil ? @client.friends.take(10) : @client.friends(:max_id => first_follower).take(10)
 
-  @followers.each do |user|
+  @friends.each do |user|
     puts user.id
   end
-  erb :show_followers
+  erb :show_friends
+end
+
+
+# Gt block fo the automatic
+# unfollow feature of the
+# system
+get '/automatic_unfollow' do
+
+  # Get array of 10 recent friends
+  friends = @client.friends.take(10)
+
+  friends.each do |user|
+
+    # Get FollowerCandidate obj to calculate score
+    candidate = FollowerCandidate.new(@client, user, nil)
+    score = candidate.calculate_score
+
+    # Unfollow if score is less than expected
+    if score <= BLACK_LIST_SCORE then
+      puts "unfollowed #{user.screen_name}"
+      @client.unfollow(user)
+    end
+  end
+
+  # Show the friends again
+  redirect '/show_friends'
+
 end
