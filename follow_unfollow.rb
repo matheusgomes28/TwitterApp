@@ -66,7 +66,7 @@ get '/automatic_unfollow' do
     end
   end
 
-  # Show the friends again
+  # Show the friends againw
   redirect '/show_friends'
 
 end
