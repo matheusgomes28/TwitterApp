@@ -9,8 +9,33 @@ module WithinHelpers
 end
 World(WithinHelpers)
 
+# Edit if any of the settings change
+# regarding the login form
+LOGIN_FORM = 'form' #name of form
+ADMIN_USERNAME = 'matheus' #string of username
+ADMIN_PASSWORD = '123' # Password (on my database)
+SUBMIT = 'Submit' # name of submit button
+
 Given /^(?:|I )am on (.+)$/ do |page_name|
   visit path_to(page_name)
+end
+
+# Defined a given block for when
+# user needs to be logged in
+Given /^I am logged in$/ do
+
+  visit path_to('the homepage') # Go to home page
+
+  # Go to login form
+  with_scope(LOGIN_FORM) do
+
+    # Fill in correct details (Gotta be correct user and pass)
+    fill_in('username', :with => ADMIN_USERNAME)
+    fill_in('password', :with => ADMIN_PASSWORD)
+
+    # Sumbit the form
+    click_button(SUBMIT)
+  end
 end
 
 When /^(?:|I )go to (.+)$/ do |page_name|
@@ -24,6 +49,7 @@ When /^(?:|I )press "([^\"]*)"(?: within "([^\"]*)")?$/ do |button, selector|
 end
 
 When /^(?:|I )follow "([^\"]*)"(?: within "([^\"]*)")?$/ do |link, selector|
+
   with_scope(selector) do
     click_link(link)
   end
