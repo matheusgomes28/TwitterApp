@@ -1,6 +1,9 @@
 <% if session[:logged_in] then %>
-    <ul id="userMenu">
+    <ul id="userMenu" >
       <li>Welcome <%= session[:username] %>!</li>
       <li><a alt="logout" href="/logout">Logout</a></li>
+      <li><a alt="settings" href="/settings">Settings</a></li>
+      <li><a alt="show history" href="/show-history">Search History</a></li>
+      <li><a alt="show friends" href="/show_friends">Friends</a></li>
     </ul>
 <% end %>

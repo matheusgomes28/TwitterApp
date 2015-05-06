@@ -127,22 +127,17 @@ end
 
 
 
-# COMMENT ON THIS
 
-get '/follow' do
-  puts 'passed follow'
-  puts params[:user]
-  @client.follow(params[:user])
-  redirect "/show_button?user=#{params[:user]}&followed=1&height=30&width=70"
-end
 
-get '/unfollow' do
-  puts 'passed ufollow'
-  @client.unfollow(params[:user])
-  redirect "/show_button?user=#{params[:user]}&followed=0&height=30&width=70"
-end
+# The following three gets are used to display
+# the correct button (follow/unfollow) in
+# pages where it's possible to follow other
+# users - using iframes instead of AJAX because
+# we haven't learnt it yet ;)
 
 get '/show_button' do
+
+  # Get info from parameters
   @followed = params[:followed]
   @height = params[:height]
   @width = params[:width]
@@ -151,3 +146,16 @@ get '/show_button' do
   erb :show_button
 
 end
+
+get '/follow' do
+  @client.follow(params[:user])
+  redirect "/show_button?user=#{params[:user]}&followed=1&height=30&width=70"
+end
+
+get '/unfollow' do
+
+  @client.unfollow(params[:user])
+  redirect "/show_button?user=#{params[:user]}&followed=0&height=30&width=70"
+
+end
+
