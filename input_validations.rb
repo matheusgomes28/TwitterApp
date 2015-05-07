@@ -24,11 +24,11 @@ post '/login_validate' do
       # Set sessions needed
       session[:logged_in] = true
       session[:username] = params[:username]
-      session[:login_time] = DateTime.now
 
       # Add login time session to db
-      query = 'INSERT INTO sessions(username) VALUES(?)'
-      @db.execute(query, [session[:username]])
+      query = "INSERT INTO sessions(username, date) VALUES(?, DATETIME(?, 'localtime'))"
+      @db.execute(query, [session[:username], DateTime.now.to_s])
+      puts 'executed login'
 
       # Sends to access granted page and creates session
       redirect '/home'

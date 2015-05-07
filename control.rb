@@ -3,6 +3,7 @@ require 'sqlite3'
 require 'digest'
 require 'thin'
 require 'sinatra'
+require 'date'
 include ERB::Util
 
 require_relative('directions')
@@ -25,15 +26,31 @@ before do
 
   if session[:logged_in] then
 
+    # Get last time user logged in
+    date = @db.execute('SELECT MAX(date) FROM sessions WHERE username=?', session[:username])[0][0]
+    last_login = date_string_to_object(date)
+
+    # Get time difference in seconds
+    time_diff = (DateTime.now - last_login)*24*60
+    puts time_diff.to_f
+
+    # Log user out after 30 minutes
+    if time_diff > 30 then
+      session[:logged_in] = false
+    end
+
+    # Query to get user details
+    query = %{
+             SELECT settings.consumer_key,
+                    settings.consumer_secret,
+                    settings.access_token,
+                    settings.access_token_secret
+             FROM users, settings
+             WHERE users.username = ? AND users.username = settings.username;
+            }
+
     # Get user's tokens from db
-    user_details = @db.execute %{
-                                   SELECT settings.consumer_key,
-                                          settings.consumer_secret,
-                                          settings.access_token,
-                                          settings.access_token_secret
-                                   FROM users, settings
-                                   WHERE users.username = '#{session[:username]}' AND users.username = settings.username;
-                                  }
+    user_details = @db.execute(query, session[:username])
 
     config = {
         :consumer_key => user_details[0][0],

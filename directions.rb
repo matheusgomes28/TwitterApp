@@ -45,8 +45,8 @@ get '/do_search' do
 
   # Save the search if user requested so
   if params[:save_search] == 'on' then
-    query = 'INSERT INTO searches(username, search) VALUES(?, ?);'
-    @db.execute(query, [session[:username], params[:search]])
+    query = "INSERT INTO searches(username, search, date) VALUES(?, ?, DATETIME(?, 'localtime'));"
+    @db.execute(query, [session[:username], params[:search], DateTime.now.to_s])
   end
 
   @title = 'Showing search results'
