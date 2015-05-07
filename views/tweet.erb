@@ -1,0 +1,23 @@
+<%= erb :header %>
+
+<h1 align="center">Your message has been tweeted</h1>
+<article id="form">
+  <div id="tweet_table">
+  <table>
+    <tr>
+      <th>Id</th>
+      <th>Tweet</th>
+    </tr>
+        <tr>
+          <td>
+            <img alt="image" src="<%= @tweet.user.profile_image_uri.to_s %>" /><br />
+            <%=h @tweet.user.name %><br />
+            @<%=h @tweet.user.user_name %><br />
+          </td>
+          <td><%=h @tweet.text%></td>
+        </tr>
+  </table>
+  </div>
+</article>
+
+<%= erb :footer %>
