@@ -3,8 +3,6 @@
 # other parts of the system that may require
 # user inputs and validation.
 
-# FIXXXXXXXX THE SQL STATEMENTS
-
 
 require 'sqlite3'
 require 'digest'
@@ -18,7 +16,7 @@ post '/login_validate' do
   if !is_valid_username(@db, params[:username]) then
 
     # Get the unique*** password hash from the db
-    password = @db.execute("SELECT password FROM users WHERE username='#{params[:username]}'")[0][0]
+    password = @db.execute('SELECT password FROM users WHERE username=?', [params[:username]])[0][0]
 
     # Compares both hashes to see if password is the same
     if password == @md5.hexdigest(params[:password]) then
@@ -61,14 +59,20 @@ post '/register_validate' do
       if !is_email_taken(@db, params[:email]) then
         passDigest = @md5.hexdigest(params[:password])
 
-        # Insert user details into database
-        query = %{BEGIN;
-                  INSERT INTO users(username, password, email, twitter) VALUES('#{params[:username]}','#{passDigest}', '#{params[:email]}','#{params[:twitter]}');
-                  INSERT INTO settings(username, consumer_key, consumer_secret, access_token, access_token_secret) VALUES('#{params[:username]}','#{params[:consumer_key]}', '#{params[:consumer_secret]}','#{params[:access_token]}', '#{params[:access_token_secret]}');
-                  END;
-                }
 
-        @db.execute_batch query
+        # Query for insert into multiple rows into interlinked tables
+        query =  'BEGIN;'
+        query << 'INSERT INTO users(username, password, email, twitter) VALUES(?,?,?,?);'
+        query << 'INSERT INTO settings(username, consumer_key, consumer_secret, access_token, access_token_secret)'
+        query << 'VALUES(?,?,?,?,?);'
+        query << 'END;'
+
+        # Execute multiple statements
+        @db.execute_batch(query, [params[:username], passDigest, params[:email],
+                                 params[:twitter], params[:username], params[:consumer_key],
+                                 params[:consumer_secret], params[:access_token],
+                                 params[:access_token_secret]])
+
         erb :accessGranted
 
       else
@@ -83,7 +87,7 @@ post '/register_validate' do
     end
 
   else # Error string returned
-    @error = "Password don't match"
+    @error = "Passwords don't match"
     erb :wrong_info
   end
 end
