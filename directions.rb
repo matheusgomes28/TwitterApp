@@ -129,8 +129,18 @@ get '/campaign_stat' do
   redirect '/' unless session[:logged_in]
 
   #Query to get campaign info
-  query = 'SELECT name, desc, keyword FROM campaigns WHERE id = ?'
+  query = 'SELECT name, desc, keyword, retweets, favourites FROM campaigns WHERE id = ?'
   @campaign = @db.execute(query, [params[:id]])
+
+  # Select case for defining the order
+  case params[:order]
+    when 'retweets'
+      query << ' ORDER BY retweets;'
+    when 'favourites'
+      query << ' ORDER BY favourites;'
+    else
+      query << ';'
+  end
 
   # Get a tweet list containing search results
   @search_list = @client.search(@campaign[0][2]).take(10)

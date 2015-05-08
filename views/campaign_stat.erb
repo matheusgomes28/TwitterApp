@@ -34,6 +34,15 @@
   <input type="submit" value="Automatically Follow" class="sub_button" id="auto_follow"/>
 </form>
 
+<% if params[:followed] != nil %>
+    <p style="width: 150px" class="center" >Users followed:
+      <% if params[:followed] == 0 %>
+          <span>none;</span>
+      <% else %>
+          <span><%=h params[:followed] %></span>
+      <% end %>
+    </p>
+<% end %>
 
 <!-- Table to show the usernames and tweets of people who have tweeted using the campaign keyword
      and a button to follow them -->
@@ -42,7 +51,8 @@
     <tr>
       <th>Username</th>
       <th>Tweet</th>
-      <th>Retweets & Favourites</th>
+      <th><a href="/campaign_stat?order=retweets">Retweets</a></th>
+      <th><a href="/campaign_stat?order=favourites">Favourites</a></th>
       <th>Follow</th>
     </tr>
     <% @search_list.each do |tweet| %>
@@ -50,7 +60,8 @@
           <td>@<%=h tweet.user.screen_name %><br />
             <img alt="image" src="<%= tweet.user.profile_image_uri.to_s %>" /></td>
           <div id="user_tweet"><td><%=h tweet.text %></td></div>
-          <td><%= tweet.retweet_count.to_s+' '+tweet.favorite_count.to_s %></td>
+          <td><%= tweet.retweet_count.to_s %></td>
+          <td><%= tweet.favorite_count.to_s %></td>
 
           <!-- MAKE THIS LOOK NICE -->
           <td>
