@@ -1,6 +1,9 @@
 <%= erb :header %>
 <article id="form">
   <h1>Friends - People I follow.</h1>
+  <form action="/automatic_unfollow">
+    <input type="submit" class="sub_button center" value="Unfollow Automatically"/>
+  </form>
   <table>
     <tr>
       <th>User</th>

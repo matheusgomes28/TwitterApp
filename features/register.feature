@@ -16,7 +16,7 @@ Feature: Testing the "registering new accounts" feature of the system.
     When I fill in "access_token" with "EDIT THIS" within "form"
     When I fill in "access_token_secret" with "EDIT THIS" within "form"
     When I press "Submit" within "form"
-    Then I should see "Access granted"
+    Then I should see "Access Granted"
 
 
   Scenario: Logging in with the newly create account
@@ -24,4 +24,4 @@ Feature: Testing the "registering new accounts" feature of the system.
     When I fill in "username" with "user" within "form"
     When I fill in "password" with "secret" within "form"
     When I press "Submit" within "form"
-    Then I should see "Welcome back!"
+    Then I should see "Welcome user"
