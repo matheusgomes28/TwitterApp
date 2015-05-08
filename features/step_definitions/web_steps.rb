@@ -13,7 +13,7 @@ World(WithinHelpers)
 # regarding the login form
 LOGIN_FORM = 'form' #name of form
 ADMIN_USERNAME = 'matheus' #string of username
-ADMIN_PASSWORD = '123' # Password (on my database)
+ADMIN_PASSWORD = 'password' # Password (on my database)
 SUBMIT = 'Submit' # name of submit button
 
 Given /^(?:|I )am on (.+)$/ do |page_name|

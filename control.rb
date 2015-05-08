@@ -32,7 +32,6 @@ before do
 
     # Get time difference in seconds
     time_diff = (DateTime.now - last_login)*24*60
-    puts time_diff.to_f
 
     # Log user out after 30 minutes
     if time_diff > 30 then

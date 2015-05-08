@@ -226,6 +226,7 @@ div#user_name{
     border: none;
     background: url('images/delete.png') no-repeat;
     background-size: 30px 30px;
+    font-size: 0;
 }
 
 

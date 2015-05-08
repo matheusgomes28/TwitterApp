@@ -14,7 +14,7 @@ Feature: Testing the "registering new accounts" feature of the system.
     When I fill in "consumer_key" with "EDIT THIS" within "form"
     When I fill in "consumer_secret" with "EDIT THIS" within "form"
     When I fill in "access_token" with "EDIT THIS" within "form"
-    When I fill in "access_toke_secret" with "EDIT THIS" within "form"
+    When I fill in "access_token_secret" with "EDIT THIS" within "form"
     When I press "Submit" within "form"
     Then I should see "Access granted"
 
