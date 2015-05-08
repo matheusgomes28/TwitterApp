@@ -1,7 +1,8 @@
 Feature: Automatic follow/unfollowing someone
   As a user,
   I want the system to automatically follo/unfollow people,
-  So that I can
+  So that I can contact relevant people
+
   Scenario: Go to the campaign stat page
     Given I am logged in
     When I follow "View Campaigns" within "header"

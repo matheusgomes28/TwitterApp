@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2d5dc3dc-502f-42f3-a2ec-044fc139bb9f" name="Default" comment=",.">
-      <change type="DELETED" beforePath="H:\project\login.db" afterPath="" />
+    <list default="true" id="2d5dc3dc-502f-42f3-a2ec-044fc139bb9f" name="Default" comment="Added testing for the settings">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/features/change_settings.feature" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.db" afterPath="$PROJECT_DIR$/login.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/support/env.rb" afterPath="$PROJECT_DIR$/features/support/env.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/follow_unfollow.feature" afterPath="$PROJECT_DIR$/features/follow_unfollow.feature" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/project.iml" afterPath="$PROJECT_DIR$/.idea/project.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/register.feature" afterPath="$PROJECT_DIR$/features/register.feature" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/step_definitions/web_steps.rb" afterPath="$PROJECT_DIR$/features/step_definitions/web_steps.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
+    <list id="c481fd65-0893-4515-84bd-f5add71a6db8" name="New changelist" comment="" />
     <ignored path="project.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,14 +24,13 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/project@IRB_console__project.coverage" NAME="IRB console: project Coverage Results" MODIFIED="1429017804503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="project" />
-    <SUITE FILE_PATH="coverage/project@follow__project.coverage" NAME="follow: project Coverage Results" MODIFIED="1431100217663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="project" />
+    <SUITE FILE_PATH="coverage/project@logout__project.coverage" NAME="logout: project Coverage Results" MODIFIED="1430921200372" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="project" />
     <SUITE FILE_PATH="coverage/project@directions.coverage" NAME="directions Coverage Results" MODIFIED="1430924682332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="project" />
-    <SUITE FILE_PATH="coverage/project@control.coverage" NAME="control Coverage Results" MODIFIED="1431102770533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="project" />
-    <SUITE FILE_PATH="coverage/project@run_cucumber.coverage" NAME="run_cucumber Coverage Results" MODIFIED="1431102867602" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="project" />
     <SUITE FILE_PATH="coverage/project@All_tests_in_project__project.coverage" NAME="All tests in project: project Coverage Results" MODIFIED="1424463138265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="project" />
     <SUITE FILE_PATH="coverage/project@useful_functions.coverage" NAME="useful_functions Coverage Results" MODIFIED="1429302474732" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="project" />
-    <SUITE FILE_PATH="coverage/project@logout__project.coverage" NAME="logout: project Coverage Results" MODIFIED="1430921200372" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="project" />
+    <SUITE FILE_PATH="coverage/project@control.coverage" NAME="control Coverage Results" MODIFIED="1431106248915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="project" />
+    <SUITE FILE_PATH="coverage/project@IRB_console__project.coverage" NAME="IRB console: project Coverage Results" MODIFIED="1429017804503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="project" />
+    <SUITE FILE_PATH="coverage/project@change_settings__project.coverage" NAME="change_settings: project Coverage Results" MODIFIED="1431106993736" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="project" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -37,86 +44,105 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="register.feature" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="control.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/control.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="209" max-vertical-offset="1241">
+              <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="follow_unfollow.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/follow_unfollow.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="483" max-vertical-offset="1445">
+              <caret line="71" column="28" selection-start-line="71" selection-start-column="28" selection-end-line="71" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="4063" max-vertical-offset="5763">
+              <caret line="239" column="0" selection-start-line="239" selection-start-column="0" selection-end-line="239" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show_friends.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/show_friends.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-16.346153" vertical-offset="0" max-vertical-offset="867">
+              <caret line="25" column="72" selection-start-line="25" selection-start-column="72" selection-end-line="25" selection-end-column="72" />
+              <folding>
+                <element signature="e#261#281#0#HTML" expanded="true" />
+                <element signature="e#1024#1095#0#HTML" expanded="true" />
+                <element signature="e#1294#1365#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="register.feature" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/features/register.feature">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
-              <caret line="29" column="19" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+              <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="logout.feature" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/features/logout.feature">
+      <file leaf-file-name="change_settings.feature" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/features/change_settings.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
-              <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="130" max-vertical-offset="884">
+              <caret line="38" column="62" selection-start-line="38" selection-start-column="62" selection-end-line="38" selection-end-column="62" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="campaigns.feature" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/features/campaigns.feature">
+      <file leaf-file-name="env.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/features/support/env.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
-              <caret line="26" column="59" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="59" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="9" selection-end-column="3" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show_campaigns.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/show_campaigns.erb">
+      <file leaf-file-name="follow_unfollow.feature" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/features/follow_unfollow.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.5769231" vertical-offset="77" max-vertical-offset="799">
-              <caret line="10" column="28" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
+              <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tweet.feature" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/features/tweet.feature">
+      <file leaf-file-name="settings.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/settings.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.23684211" vertical-offset="0" max-vertical-offset="646">
-              <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="52" />
+            <state vertical-scroll-proportion="-6.730769" vertical-offset="12" max-vertical-offset="1394">
+              <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="45" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="campaign_stat.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/campaign_stat.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.884615" vertical-offset="719" max-vertical-offset="1377">
-              <caret line="62" column="30" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
-              <folding>
-                <element signature="e#2036#2107#0#HTML" expanded="true" />
-                <element signature="e#2312#2383#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="web_steps.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="web_steps.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/features/step_definitions/web_steps.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.04" vertical-offset="3561" max-vertical-offset="4199">
-              <caret line="236" column="3" selection-start-line="236" selection-start-column="3" selection-end-line="236" selection-end-column="3" />
-              <folding>
-                <marker date="1431103478202" expanded="true" signature="6481:6493" placeholder="do ... end" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.feature" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/features/login.feature">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="731">
-              <caret line="5" column="49" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="49" />
+            <state vertical-scroll-proportion="1.0145888" vertical-offset="0" max-vertical-offset="4199">
+              <caret line="45" column="3" selection-start-line="45" selection-start-column="3" selection-end-line="45" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -134,20 +160,41 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
-    <option name="changedFiles">
+    <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/views/home.erb" />
-        <option value="$PROJECT_DIR$/features/search_history.feature" />
-        <option value="$PROJECT_DIR$/features/login.feature" />
-        <option value="$PROJECT_DIR$/views/campaigns.erb" />
-        <option value="$PROJECT_DIR$/views/show_campaigns.erb" />
-        <option value="$PROJECT_DIR$/features/navigation.feature" />
-        <option value="$PROJECT_DIR$/features/support/env.rb" />
-        <option value="$PROJECT_DIR$/features/register.feature" />
-        <option value="$PROJECT_DIR$/features/follow.feature" />
+        <option value="$PROJECT_DIR$/views/show_button.erb" />
         <option value="$PROJECT_DIR$/views/campaign_stat.erb" />
+        <option value="$PROJECT_DIR$/views/show_followers.erb" />
+        <option value="$PROJECT_DIR$/run_cucumber.rb" />
+        <option value="$PROJECT_DIR$/views/index.erb" />
+        <option value="$PROJECT_DIR$/features/example.feature" />
+        <option value="$PROJECT_DIR$/follower_candidate.rb" />
+        <option value="$PROJECT_DIR$/public/drop-menu.css" />
+        <option value="$PROJECT_DIR$/views/header.erb" />
+        <option value="$PROJECT_DIR$/views/user_control.erb" />
+        <option value="$PROJECT_DIR$/features/logout.feature" />
+        <option value="$PROJECT_DIR$/views/error.erb" />
+        <option value="$PROJECT_DIR$/views/not_found.erb" />
+        <option value="$PROJECT_DIR$/features/campaigns.feature" />
+        <option value="$PROJECT_DIR$/views/show_campaigns.erb" />
+        <option value="$PROJECT_DIR$/features/search_history.feature" />
+        <option value="$PROJECT_DIR$/views/show_tweets.erb" />
+        <option value="$PROJECT_DIR$/features/support/paths.rb" />
+        <option value="$PROJECT_DIR$/directions.rb" />
+        <option value="$PROJECT_DIR$/views/show_history.erb" />
+        <option value="$PROJECT_DIR$/useful_functions.rb" />
+        <option value="$PROJECT_DIR$/public/style.css" />
+        <option value="$PROJECT_DIR$/features/login.feature" />
+        <option value="$PROJECT_DIR$/control.rb" />
+        <option value="$PROJECT_DIR$/input_validations.rb" />
+        <option value="$PROJECT_DIR$/follow_unfollow.rb" />
+        <option value="$PROJECT_DIR$/views/show_friends.erb" />
+        <option value="$PROJECT_DIR$/features/register.feature" />
+        <option value="$PROJECT_DIR$/features/automatic_follow.feature" />
+        <option value="$PROJECT_DIR$/features/follow_unfollow.feature" />
         <option value="$PROJECT_DIR$/features/step_definitions/web_steps.rb" />
-        <option value="$PROJECT_DIR$/features/zfollow.feature" />
+        <option value="$PROJECT_DIR$/features/change_settings.feature" />
+        <option value="$PROJECT_DIR$/features/support/env.rb" />
       </list>
     </option>
   </component>
@@ -169,9 +216,6 @@
     <OptionsSetting value="true" id="Edit" />
     <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
-  </component>
-  <component name="ProjectReloadState">
-    <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -304,7 +348,146 @@
       <recent name="C:\Users\Matheus\Desktop\project\features" />
     </key>
   </component>
-  <component name="RunManager" selected="Ruby.run_cucumber">
+  <component name="RestoreUpdateTree">
+    <UpdateInfo date="Moments ago" ActionInfo="_Update">
+      <UpdatedFiles>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated from server" />
+          <option name="myStatusName" value="Changed on server" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CHANGED_ON_SERVER" />
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Updated" />
+            <option name="myStatusName" value="Changed" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="UPDATED" />
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/project.iml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/directions.rb</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/features/login.feature</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/features/navigation.feature</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/features/register.feature</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/login.db</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/views/campaign_stat.erb</PATH>
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Created" />
+            <option name="myStatusName" value="Created" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="CREATED" />
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/features/follow.feature</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/features/zfollow.feature</PATH>
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Deleted" />
+            <option name="myStatusName" value="Deleted" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="true" />
+            <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Restored" />
+            <option name="myStatusName" value="Will be restored" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="RESTORED" />
+          </FILE-GROUP>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Modified" />
+          <option name="myStatusName" value="Modified" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MODIFIED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Skipped" />
+          <option name="myStatusName" value="Skipped" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SKIPPED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with conflicts" />
+          <option name="myStatusName" value="Will be merged with conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_CONFLICTS" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with tree conflicts" />
+          <option name="myStatusName" value="Merged with tree conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with property conflicts" />
+          <option name="myStatusName" value="Will be merged with property conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged" />
+          <option name="myStatusName" value="Will be merged" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Not in repository" />
+          <option name="myStatusName" value="Not in repository" />
+          <option name="mySupportsDeletion" value="true" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UNKNOWN" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally added" />
+          <option name="myStatusName" value="Locally added" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_ADDED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally removed" />
+          <option name="myStatusName" value="Locally removed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_REMOVED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Switched" />
+          <option name="myStatusName" value="Switched" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SWITCHED" />
+        </FILE-GROUP>
+      </UpdatedFiles>
+    </UpdateInfo>
+  </component>
+  <component name="RunManager" selected="Cucumber.change_settings: project">
+    <configuration default="false" name="run_cucumber" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
+      <module name="project" />
+      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/run_cucumber.rb" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
     <configuration default="false" name="control" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
       <module name="project" />
       <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -378,25 +561,7 @@
       <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="run_cucumber" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
-      <module name="project" />
-      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="$MODULE_DIR$" />
-      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
-      <envs />
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
-      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
-      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/run_cucumber.rb" />
-      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
-      <RunnerSettings RunnerId="RubyRunner" />
-      <ConfigurationWrapper RunnerId="RubyRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="follow: project" type="CucumberRunConfigurationType" factoryName="Cucumber" temporary="true">
+    <configuration default="false" name="change_settings: project" type="CucumberRunConfigurationType" factoryName="Cucumber" temporary="true">
       <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
       <module name="project" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -414,7 +579,7 @@
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*.feature" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/features/follow.feature" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/features/change_settings.feature" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TAGS_FILTER" VALUE="" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_NAME_FILTER" VALUE="" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_ARGS" VALUE="--color -r features" />
@@ -550,18 +715,27 @@
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
       <method />
     </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
+      <method />
+    </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Ruby.control" />
-      <item index="1" class="java.lang.String" itemvalue="Cucumber.logout: project" />
-      <item index="2" class="java.lang.String" itemvalue="Ruby.directions" />
-      <item index="3" class="java.lang.String" itemvalue="Ruby.run_cucumber" />
-      <item index="4" class="java.lang.String" itemvalue="Cucumber.follow: project" />
+      <item index="0" class="java.lang.String" itemvalue="Ruby.run_cucumber" />
+      <item index="1" class="java.lang.String" itemvalue="Ruby.control" />
+      <item index="2" class="java.lang.String" itemvalue="Cucumber.logout: project" />
+      <item index="3" class="java.lang.String" itemvalue="Ruby.directions" />
+      <item index="4" class="java.lang.String" itemvalue="Cucumber.change_settings: project" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Ruby.run_cucumber" />
+        <item index="0" class="java.lang.String" itemvalue="Cucumber.change_settings: project" />
         <item index="1" class="java.lang.String" itemvalue="Ruby.control" />
-        <item index="2" class="java.lang.String" itemvalue="Cucumber.follow: project" />
+        <item index="2" class="java.lang.String" itemvalue="Ruby.run_cucumber" />
         <item index="3" class="java.lang.String" itemvalue="Ruby.directions" />
         <item index="4" class="java.lang.String" itemvalue="Cucumber.logout: project" />
       </list>
@@ -574,140 +748,218 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="2d5dc3dc-502f-42f3-a2ec-044fc139bb9f" name="Default" comment="" />
+      <changelist id="c481fd65-0893-4515-84bd-f5add71a6db8" name="New changelist" comment="" />
       <created>1424182141930</created>
+      <option name="number" value="Default" />
       <updated>1424182141930</updated>
     </task>
     <task id="LOCAL-00001" summary="Added pages to create campaigns and to show all the campaigns. Also did some work on the database, although it's not yet normalised,  I applied some common sense to split some tables up so that the data is less redundant.">
       <created>1425935563047</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
       <updated>1425935563047</updated>
     </task>
     <task id="LOCAL-00002" summary="Added pages to create campaigns and to show all the campaigns. Also did some work on the database, although it's not yet normalised,  I applied some common sense to split some tables up so that the data is less redundant.">
       <created>1425996368788</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
       <updated>1425996368788</updated>
     </task>
     <task id="LOCAL-00003" summary="Added pages to create campaigns and to show all the campaigns. Also did some work on the database, although it's not yet normalised,  I applied some common sense to split some tables up so that the data is less redundant.">
       <created>1425996413718</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
       <updated>1425996413718</updated>
     </task>
     <task id="LOCAL-00004" summary="Added simple settings page. User will then be able to change his/her details.">
       <created>1426013853841</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
       <updated>1426013853841</updated>
     </task>
     <task id="LOCAL-00005" summary="Added simple settings page. User will then be able to change his/her details.">
       <created>1426013865022</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
       <updated>1426013865022</updated>
     </task>
     <task id="LOCAL-00006" summary="Added direct messages page, as well as starting the ordering of campaigns requested by the user - this is not yet finished but shouldn't be hard to fix. I'll finish it off when I find a solution to a problem I'm encountering.">
       <created>1426022403129</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
       <updated>1426022403129</updated>
     </task>
     <task id="LOCAL-00007" summary="Improve the aesthetics of the website by adding icons and some other stuff. Each page has an unique title now, in addition, I started working on the deletions of campaigns (not finished but shouldn't take more than a couple of hours to finish it).">
       <created>1426280642528</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
       <updated>1426280642528</updated>
     </task>
     <task id="LOCAL-00008" summary="Improve the aesthetics of the website by adding icons and some other stuff. Each page has an unique title now, in addition, I started working on the deletions of campaigns (not finished but shouldn't take more than a couple of hours to finish it).">
       <created>1426280648947</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
       <updated>1426280648947</updated>
     </task>
     <task id="LOCAL-00009" summary="Started refractoring code and rewriting stuff to make it more readable and more efficient. More importantly, slitting the controller up into multiple files to make code more cohesive.">
       <created>1429302608820</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
       <updated>1429302608820</updated>
     </task>
     <task id="LOCAL-00010" summary="Second refractoring commit. Now main control has been split into multiple files.">
       <created>1429308957907</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
       <updated>1429308957907</updated>
     </task>
     <task id="LOCAL-00011" summary="Finished the &quot;saving history&quot; criteria - searches are saved into the database if user chooses to. Also added the tweet box (not functional yet) - work done by Andreea and Becca.">
       <created>1429545328600</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
       <updated>1429545328600</updated>
     </task>
     <task id="LOCAL-00012" summary="Finished the &quot;saving history&quot; criteria - searches are saved into the database if user chooses to. Also added the tweet box (not functional yet) - work done by Andreea and Becca.">
       <created>1429545340822</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
       <updated>1429545340822</updated>
     </task>
     <task id="LOCAL-00013" summary="Added &quot;View Search history&quot; page where user can see the earches he has saved.">
       <created>1429697326349</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
       <updated>1429697326349</updated>
     </task>
     <task id="LOCAL-00014" summary="Added &quot;View Search history&quot; page where user can see the earches he has saved.">
       <created>1429698672562</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
       <updated>1429698672562</updated>
     </task>
     <task id="LOCAL-00015" summary="Fixing merge errors.">
       <created>1430832084871</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
       <updated>1430832084871</updated>
     </task>
     <task id="LOCAL-00016" summary="Created feature to unfollow users based on certain criteria.">
       <created>1430911681183</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
       <updated>1430911681183</updated>
     </task>
     <task id="LOCAL-00017" summary="Created feature to unfollow users based on certain criteria.">
       <created>1430911827507</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
       <updated>1430911827507</updated>
     </task>
     <task id="LOCAL-00018" summary="Created feature to unfollow users based on certain criteria.">
       <created>1430912298363</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
       <updated>1430912298363</updated>
     </task>
     <task id="LOCAL-00019" summary="Improved the user menu - added settings, friends and history to the user menu (only sows when logged in).">
       <created>1430918728289</created>
+      <option name="number" value="00019" />
+      <option name="project" value="LOCAL" />
       <updated>1430918728289</updated>
     </task>
     <task id="LOCAL-00020" summary="Added the logout feature cucumber test as well as adding a new &quot;Given&quot; step for when the admin is logged in, which is needed in most of our tests. (This is why people failed to test the logout feature).">
       <created>1430921955691</created>
+      <option name="number" value="00020" />
+      <option name="project" value="LOCAL" />
       <updated>1430921955691</updated>
     </task>
     <task id="LOCAL-00021" summary="Refractored some code. I've prepared all SQL statements in the code, added the error pages (need to be styled to make it look better plz andrea or becca).">
       <created>1430925194893</created>
+      <option name="number" value="00021" />
+      <option name="project" value="LOCAL" />
       <updated>1430925194893</updated>
     </task>
     <task id="LOCAL-00022" summary="Added more test cases for features regarding campaigns and the search history. Also modified some files in order to make it easier to test stuff.">
       <created>1430939520858</created>
+      <option name="number" value="00022" />
+      <option name="project" value="LOCAL" />
       <updated>1430939520858</updated>
     </task>
     <task id="LOCAL-00023" summary="Modified database so that we can store when users have logged into the system. Also search history now stores the date of the search and displays it to the user.">
       <created>1430954177013</created>
+      <option name="number" value="00023" />
+      <option name="project" value="LOCAL" />
       <updated>1430954177013</updated>
     </task>
     <task id="LOCAL-00024" summary="Added register testing cases and done more AQL statements preparing.">
       <created>1431021553690</created>
+      <option name="number" value="00024" />
+      <option name="project" value="LOCAL" />
       <updated>1431021553690</updated>
     </task>
-    <task id="LOCAL-00025" summary=",.">
-      <created>1431093706281</created>
-      <updated>1431093706281</updated>
+    <task id="LOCAL-00025" summary="System now logs you out after 30 mnutes.">
+      <created>1431034705306</created>
+      <option name="number" value="00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1431034705306</updated>
     </task>
-    <task id="LOCAL-00026" summary="Added functional tests for the navigation system">
-      <created>1431097303579</created>
-      <updated>1431097303579</updated>
+    <task id="LOCAL-00026" summary="Fixed the registering form that broke when code refractored.">
+      <created>1431089870757</created>
+      <option name="number" value="00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1431089870757</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Fixing merge errors.">
+      <created>1431093823679</created>
+      <option name="number" value="00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1431093823679</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Modified automatic followed page so that it can now be tested.">
+      <created>1431103397025</created>
+      <option name="number" value="00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1431103397025</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Modified the automatic unfollow page so that it can be tested now.">
+      <created>1431104385763</created>
+      <option name="number" value="00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1431104385763</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Adde user story to feature and renamed file.">
+      <created>1431106071098</created>
+      <option name="number" value="00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1431106071098</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299075" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1963001" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24895833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24895833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31038028" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3100616" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3100616" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299075" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299075" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32887974" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -733,7 +985,6 @@
     <MESSAGE value="Second refractoring commit. Now main control has been split into multiple files." />
     <MESSAGE value="Finished the &quot;saving history&quot; criteria - searches are saved into the database if user chooses to. Also added the tweet box (not functional yet) - work done by Andreea and Becca." />
     <MESSAGE value="Added &quot;View Search history&quot; page where user can see the earches he has saved." />
-    <MESSAGE value="Fixing merge errors." />
     <MESSAGE value="Created feature to unfollow users based on certain criteria." />
     <MESSAGE value="Improved the user menu - added settings, friends and history to the user menu (only sows when logged in)." />
     <MESSAGE value="Added the logout feature cucumber test as well as adding a new &quot;Given&quot; step for when the admin is logged in, which is needed in most of our tests. (This is why people failed to test the logout feature)." />
@@ -741,9 +992,13 @@
     <MESSAGE value="Added more test cases for features regarding campaigns and the search history. Also modified some files in order to make it easier to test stuff." />
     <MESSAGE value="Modified database so that we can store when users have logged into the system. Also search history now stores the date of the search and displays it to the user." />
     <MESSAGE value="Added register testing cases and done more AQL statements preparing." />
-    <MESSAGE value=",." />
-    <MESSAGE value="Added functional tests for the navigation system" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added functional tests for the navigation system" />
+    <MESSAGE value="System now logs you out after 30 mnutes." />
+    <MESSAGE value="Fixed the registering form that broke when code refractored." />
+    <MESSAGE value="Fixing merge errors." />
+    <MESSAGE value="Modified automatic followed page so that it can now be tested." />
+    <MESSAGE value="Modified the automatic unfollow page so that it can be tested now." />
+    <MESSAGE value="Adde user story to feature and renamed file." />
+    <option name="LAST_COMMIT_MESSAGE" value="Adde user story to feature and renamed file." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -755,8 +1010,23 @@
       </breakpoints>
       <option name="time" value="9" />
     </breakpoint-manager>
+    <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/views/header.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="16" max-vertical-offset="918">
+          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/footer.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="867">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/control.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1598">
@@ -848,10 +1118,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/settings.erb">
+    <entry file="file://$PROJECT_DIR$/views/campaign_stat.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.4051864" vertical-offset="0" max-vertical-offset="1394">
-          <caret line="51" column="12" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="1360">
+          <caret line="56" column="144" selection-start-line="56" selection-start-column="144" selection-end-line="56" selection-end-column="144" />
         </state>
       </provider>
     </entry>
@@ -876,31 +1146,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.1034484" vertical-offset="0" max-vertical-offset="5644">
-          <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/follow_unfollow.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="1309">
-          <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/show_button.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="425">
           <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/user_control.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17056856" vertical-offset="0" max-vertical-offset="598">
-          <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -911,17 +1160,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/home.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="35" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="646">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/campaigns.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="782">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/not_found.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="408">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/show_friends.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.384615" vertical-offset="59" max-vertical-offset="663">
-          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -932,10 +1196,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user_settings.rb">
+    <entry file="file://$PROJECT_DIR$/features/logout.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7375661" vertical-offset="0" max-vertical-offset="1513">
-          <caret line="41" column="61" selection-start-line="41" selection-start-column="61" selection-end-line="41" selection-end-column="61" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+          <caret line="0" column="37" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/show_campaigns.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="782">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -953,6 +1224,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/features/search_history.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
+          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/tweet.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="945">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/tweet.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.092491835" vertical-offset="0" max-vertical-offset="919">
@@ -960,72 +1245,112 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/show_history.erb">
+    <entry file="file://$PROJECT_DIR$/features/login.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="544">
-          <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="731">
+          <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/input_validations.rb">
+    <entry file="file://$PROJECT_DIR$/features/campaigns.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="1683">
-          <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.38141027" vertical-offset="0" max-vertical-offset="624">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/useful_functions.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="819" max-vertical-offset="1547">
-          <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.07692308" vertical-offset="819" max-vertical-offset="1547">
+          <caret line="51" column="38" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/show_history.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4832776" vertical-offset="0" max-vertical-offset="598">
+          <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/directions.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2452" max-vertical-offset="3349">
-          <caret line="183" column="0" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
+        <state vertical-scroll-proportion="-2.3509614" vertical-offset="2385" max-vertical-offset="3213">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/control.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="209" max-vertical-offset="1241">
+          <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/campaigns.erb">
+    <entry file="file://$PROJECT_DIR$/input_validations.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="816">
-          <caret line="14" column="30" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1008" max-vertical-offset="1632">
+          <caret line="74" column="10" selection-start-line="74" selection-start-column="10" selection-end-line="74" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user_settings.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9766719" vertical-offset="69" max-vertical-offset="1513">
+          <caret line="41" column="61" selection-start-line="41" selection-start-column="61" selection-end-line="41" selection-end-column="61" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/features/search_history.feature">
+    <entry file="file://$PROJECT_DIR$/views/user_control.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
-          <caret line="9" column="71" selection-start-line="9" selection-start-column="60" selection-end-line="9" selection-end-column="71" />
+        <state vertical-scroll-proportion="0.16531605" vertical-offset="0" max-vertical-offset="617">
+          <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.erb">
+    <entry file="file://$PROJECT_DIR$/follow_unfollow.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="646">
-          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="483" max-vertical-offset="1445">
+          <caret line="71" column="28" selection-start-line="71" selection-start-column="28" selection-end-line="71" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4063" max-vertical-offset="5763">
+          <caret line="239" column="0" selection-start-line="239" selection-start-column="0" selection-end-line="239" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/show_friends.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.346153" vertical-offset="0" max-vertical-offset="867">
+          <caret line="25" column="72" selection-start-line="25" selection-start-column="72" selection-end-line="25" selection-end-column="72" />
           <folding>
-            <marker date="1431089882144" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1431089882144" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1431089882144" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1431089882144" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1431089882144" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1431089882144" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1431089882144" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1431089882144" expanded="true" signature="-1:-1" placeholder="..." />
+            <element signature="e#261#281#0#HTML" expanded="true" />
+            <element signature="e#1024#1095#0#HTML" expanded="true" />
+            <element signature="e#1294#1365#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/home.erb">
+    <entry file="file://$PROJECT_DIR$/views/settings.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="731">
-          <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
+        <state vertical-scroll-proportion="-6.730769" vertical-offset="12" max-vertical-offset="1394">
+          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/change_settings.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="130" max-vertical-offset="884">
+          <caret line="38" column="62" selection-start-line="38" selection-start-column="62" selection-end-line="38" selection-end-column="62" />
           <folding />
         </state>
       </provider>
@@ -1033,55 +1358,15 @@
     <entry file="file://$PROJECT_DIR$/features/support/env.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="0" selection-end-line="9" selection-end-column="3" />
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="9" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/control.rb">
+    <entry file="file://$PROJECT_DIR$/features/follow_unfollow.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="595" max-vertical-offset="1241">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/features/redirect.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/features/navigation.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="731">
-          <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/features/login.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="731">
-          <caret line="5" column="49" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/features/logout.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
-          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/features/campaigns.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
-          <caret line="26" column="59" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="59" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -1089,48 +1374,18 @@
     <entry file="file://$PROJECT_DIR$/features/register.feature">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
-          <caret line="29" column="19" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+          <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/show_campaigns.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.5769231" vertical-offset="77" max-vertical-offset="799">
-          <caret line="10" column="28" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/campaign_stat.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.884615" vertical-offset="719" max-vertical-offset="1377">
-          <caret line="62" column="30" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
-          <folding>
-            <element signature="e#2036#2107#0#HTML" expanded="true" />
-            <element signature="e#2312#2383#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/features/step_definitions/web_steps.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.04" vertical-offset="3561" max-vertical-offset="4199">
-          <caret line="236" column="3" selection-start-line="236" selection-start-column="3" selection-end-line="236" selection-end-column="3" />
-          <folding>
-            <marker date="1431103478202" expanded="true" signature="6481:6493" placeholder="do ... end" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/features/tweet.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23684211" vertical-offset="0" max-vertical-offset="646">
-          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="52" />
+        <state vertical-scroll-proportion="1.0145888" vertical-offset="0" max-vertical-offset="4199">
+          <caret line="45" column="3" selection-start-line="45" selection-start-column="3" selection-end-line="45" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
   </component>
 </project>
-
