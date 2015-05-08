@@ -45,7 +45,7 @@ Feature: Testing the "registering new accounts" feature of the system.
 
   Scenario: Registering with an already taken username
     Given I am on the register page
-    When I fill in "username" with "user4" within "form"
+    When I fill in "username" with "user" within "form"
     When I fill in "password" with "secret" within "form"
     When I fill in "cPassword" with "secret" within "form"
     When I fill in "email" with "email@example.com" within "form"
