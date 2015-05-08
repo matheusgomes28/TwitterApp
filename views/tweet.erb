@@ -12,7 +12,7 @@
           <td>
             <img alt="image" src="<%= @tweet.user.profile_image_uri.to_s %>" /><br />
             <%=h @tweet.user.name %><br />
-            @<%=h @tweet.user.user_name %><br />
+            @<%=h @tweet.user.screen_name %><br />
           </td>
           <td><%=h @tweet.text%></td>
         </tr>

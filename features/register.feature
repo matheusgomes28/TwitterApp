@@ -3,6 +3,9 @@ Feature: Testing the "registering new accounts" feature of the system.
   I want to be able to register my own account on the system,
   So that I can carry out tasks that the system offers to users
 
+  # CHANGE THE REGISTERING DETAILS
+  # EVERYTIME OR USERNAME WILL ALREADY
+  # BE REGISTERED
 
   Scenario: Registering with correct details
     Given I am on the register page

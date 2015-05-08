@@ -45,8 +45,23 @@ get '/do_search' do
 
   # Save the search if user requested so
   if params[:save_search] == 'on' then
-    query = "INSERT INTO searches(username, search, date) VALUES(?, ?, DATETIME(?, 'localtime'));"
-    @db.execute(query, [session[:username], params[:search], DateTime.now.to_s])
+
+    #Check if search is already saved
+    query = 'SELECT * FROM searches WHERE username=? AND search=?'
+    list = @db.execute(query, [session[:username], params[:search]])
+
+    puts list.length
+
+    if list.length == 0 then
+      query = "INSERT INTO searches(username, search, date) VALUES(?, ?, DATETIME(?, 'localtime'));"
+      @db.execute(query, [session[:username], params[:search], DateTime.now.to_s])
+
+    else
+      puts 'updating'
+      query = "UPDATE searches SET date=DATETIME(?, 'localtime') WHERE username=? AND search=?"
+      @db.execute(query, [DateTime.now.to_s, session[:username], params[:search].chomp])
+    end
+
   end
 
   @title = 'Showing search results'
