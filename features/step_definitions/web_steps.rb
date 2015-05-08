@@ -12,8 +12,8 @@ World(WithinHelpers)
 # Edit if any of the settings change
 # regarding the login form
 LOGIN_FORM = 'form' #name of form
-ADMIN_USERNAME = 'matheus' #string of username
-ADMIN_PASSWORD = 'password' # Password (on my database)
+ADMIN_USERNAME = 'aca14acb' #string of username
+ADMIN_PASSWORD = 'numauita' # Password (on my database)
 SUBMIT = 'Submit' # name of submit button
 
 Given /^(?:|I )am on (.+)$/ do |page_name|

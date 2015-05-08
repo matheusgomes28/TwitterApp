@@ -2,7 +2,7 @@
 <%= erb :header %>
 <article id="form">
   <h1>Welcome Back! Search for something...</h1>
-  <form action="do_search" method="get">
+  <form id="search" action="do_search" method="get">
     <p>
       Search for a term: <input name="search" value="Type Something" />
       <input id="sub_button" type="submit" value="Search" /><br />
@@ -11,7 +11,7 @@
   </form>
 
   <h1>Tweet Something:</h1>
-  <form action="tweet" method="get">
+  <form id="tweet" action="tweet" method="get">
   <div id=tweetbox>
     <textarea id="tweet" name="tweet" maxlength="140" onKeyUp="textCounter(document.getElementById('tweet'), document.getElementById('counter'), 140)"></textarea>
     <div id="insidebox"><p id="counter">140 Characters remaining</p></div>
