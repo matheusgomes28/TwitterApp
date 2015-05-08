@@ -6,7 +6,7 @@ Feature: Testing the login system.
   Scenario: Correct password and username entered
     Given I am on the homepage
     When I fill in "username" with "matheus"
-    When I fill in "password" with "123"
+    When I fill in "password" with "password"
     When I press "Submit" within "form"
     Then I should see "Welcome Back!"
 

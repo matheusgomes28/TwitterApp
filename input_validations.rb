@@ -60,18 +60,15 @@ post '/register_validate' do
         passDigest = @md5.hexdigest(params[:password])
 
 
-        # Query for insert into multiple rows into interlinked tables
-        query =  'BEGIN;'
-        query << 'INSERT INTO users(username, password, email, twitter) VALUES(?,?,?,?);'
-        query << 'INSERT INTO settings(username, consumer_key, consumer_secret, access_token, access_token_secret)'
+        # Execute multiple statements within transaction
+        @db.execute 'BEGIN;'
+        query = 'INSERT INTO users(username, password, email, twitter) VALUES(?,?,?,?);'
+        @db.execute(query, [params[:username], passDigest, params[:email], params[:twitter]])
+        query = 'INSERT INTO settings(username, consumer_key, consumer_secret, access_token, access_token_secret)'
         query << 'VALUES(?,?,?,?,?);'
-        query << 'END;'
-
-        # Execute multiple statements
-        @db.execute_batch(query, [params[:username], passDigest, params[:email],
-                                 params[:twitter], params[:username], params[:consumer_key],
-                                 params[:consumer_secret], params[:access_token],
-                                 params[:access_token_secret]])
+        @db.execute(query, [params[:username], params[:consumer_key], params[:consumer_secret],
+                            params[:access_token], params[:access_token_secret]])
+        @db.execute 'END;'
 
         erb :accessGranted
 
