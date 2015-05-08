@@ -218,6 +218,12 @@ div#user_name{
 }
 
 
+/* ACCESS DENIED */
+div#denied{
+    margin: auto 0px;
+    text-align: center;
+}
+
 /* Delete button for campaigns */
 
 .delete-button{
