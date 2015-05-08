@@ -181,3 +181,12 @@ error do
   @error = 'Internal server error'
   erb :not_found
 end
+
+get '/tweet' do
+  #tweet the message
+  @tweet = @client.update(params[:tweet])
+
+  # redirect user to the tweet page
+  @title = 'Tweet a message'
+  erb :tweet
+end
