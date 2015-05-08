@@ -56,6 +56,8 @@ end
 # system
 get '/automatic_unfollow' do
 
+  unfollowed = 0 # Number of users unfollowed
+
   # Get array of 10 recent friends
   friends = @client.friends.take(10)
 
@@ -67,12 +69,12 @@ get '/automatic_unfollow' do
 
     # Unfollow if score is less than expected
     if score <= BLACK_LIST_SCORE then
-      puts "unfollowed #{user.screen_name}"
       @client.unfollow(user)
+      unfollowed += 1
     end
   end
 
   # Show the friends againw
-  redirect '/show_friends'
+  redirect "/show_friends?unfollowed=#{unfollowed}"
 
 end
