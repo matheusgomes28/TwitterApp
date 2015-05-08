@@ -42,7 +42,8 @@
     <tr>
       <th>Username</th>
       <th>Tweet</th>
-      <th>Retweets & Favourites</th>
+      <th><a href="/campaign_stat?order=retweets">Retweets</a></th>
+      <th><a href="/campaign_stat?order=favourites">Favourites</a></th>
       <th>Follow</th>
     </tr>
     <% @search_list.each do |tweet| %>
@@ -50,7 +51,8 @@
           <td>@<%=h tweet.user.screen_name %><br />
             <img alt="image" src="<%= tweet.user.profile_image_uri.to_s %>" /></td>
           <div id="user_tweet"><td><%=h tweet.text %></td></div>
-          <td><%= tweet.retweet_count.to_s+' '+tweet.favorite_count.to_s %></td>
+          <td><%= tweet.retweet_count.to_s %></td>
+          <td><%= tweet.favorite_count.to_s %></td>
 
           <!-- MAKE THIS LOOK NICE -->
           <td>
