@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2d5dc3dc-502f-42f3-a2ec-044fc139bb9f" name="Default" comment="Order the campaign statistics in order of retweets and favourites">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.db" afterPath="$PROJECT_DIR$/login.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/campaign_stat.erb" afterPath="$PROJECT_DIR$/views/campaign_stat.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/directions.rb" afterPath="$PROJECT_DIR$/directions.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/project.iml" afterPath="$PROJECT_DIR$/.idea/project.iml" />
+    <list default="true" id="2d5dc3dc-502f-42f3-a2ec-044fc139bb9f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="project.iws" />
@@ -610,13 +606,18 @@
       <created>1431097303579</created>
       <updated>1431097303579</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Order the tweets with the same keyword as the campaign in order of retweets and favourites">
+      <created>1431101872173</created>
+      <updated>1431101872173</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299075" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -632,7 +633,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32887974" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -672,7 +672,8 @@
     <MESSAGE value="Added register testing cases and done more AQL statements preparing." />
     <MESSAGE value=",." />
     <MESSAGE value="Added functional tests for the navigation system" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added functional tests for the navigation system" />
+    <MESSAGE value="Order the tweets with the same keyword as the campaign in order of retweets and favourites" />
+    <option name="LAST_COMMIT_MESSAGE" value="Order the tweets with the same keyword as the campaign in order of retweets and favourites" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
