@@ -53,9 +53,6 @@ class FollowerCandidate
     # Using Time class to get the difference in seconds then days
     days_inactive = (Time.now - last_tweet.created_at) / 86400
 
-    puts @candidate.screen_name
-    puts days_inactive.floor
-
     return days_inactive.floor #  Return # of days inactive
 
   end

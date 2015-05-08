@@ -47,12 +47,12 @@
 <!-- Table to show the usernames and tweets of people who have tweeted using the campaign keyword
      and a button to follow them -->
 <div id="follow_table">
-  <table>
+  <table id="tweet-table">
     <tr>
       <th>Username</th>
       <th>Tweet</th>
-      <th><a href="/campaign_stat?order=retweets">Retweets</a></th>
-      <th><a href="/campaign_stat?order=favourites">Favourites</a></th>
+      <th><a href="/campaign_stat?id=<%=h params[:id] %>&order=retweets">Retweets&#x25BC;</a></th>
+      <th><a href="/campaign_stat?id=<%=h params[:id] %>&order=favourites">Favourites&#x25BC;</a></th>
       <th>Follow</th>
     </tr>
     <% @search_list.each do |tweet| %>

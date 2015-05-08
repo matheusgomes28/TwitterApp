@@ -1,7 +1,8 @@
 Feature: Testing all the campaign-related features
+
   As a user/admin,
   I want to be able to create/view/delete campaigns
-  So that I can..... EDIT*** CANT REMEMBER THE USER STORY
+  So that I can maintain the campaigns.
 
   Scenario: Creating a new campaign (edit values if needed)
     Given I am logged in
@@ -28,3 +29,19 @@ Feature: Testing all the campaign-related features
     Then I should not see "Campaign Test" within "table"
     Then I should not see "Campaign Description" within "table"
     Then I should not see "#SoftwareEngineering" within "table"
+
+
+  Scenario: Sorting campaigns retweets by number of retweets
+    Given I am logged in
+    Given I am on the view campaigns page
+    When I follow "rubymine" within "table"
+    When I follow "Retweets▼" within "table[id='tweet-table']"
+    Then I should not see "Internal server error"
+
+
+  Scenario: Sorting campaigns retweets by number of favourites
+    Given I am logged in
+    Given I am on the view campaigns page
+    When I follow "rubymine" within "table"
+    When I follow "Favourites▼" within "table[id='tweet-table']"
+    Then I should not see "Internal server error"

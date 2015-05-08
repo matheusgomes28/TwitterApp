@@ -1,6 +1,6 @@
 Feature: Automatic follow/unfollowing someone
   As a user,
-  I want the system to automatically follo/unfollow people,
+  I want the system to automatically follow/unfollow people,
   So that I can contact relevant people
 
   Scenario: Go to the campaign stat page

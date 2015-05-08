@@ -7,9 +7,16 @@
   <article id="form">
 
     <% if @submitted == true then%>
-        <h1>Campaign (<%=h params[:name] %>) was submitted successfully!</h1>
-        <p><a href="show_campaigns" alt="Show our campaigns">View all campaigns.</a> OR... create a new
-        campaign below:</p>
+
+        <% if @error == '' then %>
+            <h1>Campaign (<%=h params[:name] %>) was submitted successfully!</h1>
+            <p><a href="show_campaigns" alt="Show our campaigns">View all campaigns.</a> OR... create a new
+              campaign below:</p>
+
+        <% else %>
+            <h3>Error: <%=h @error %></h3>
+        <% end %>
+
     <% end %>
 
     <h1>Create a new campaign!</h1>

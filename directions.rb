@@ -50,14 +50,11 @@ get '/do_search' do
     query = 'SELECT * FROM searches WHERE username=? AND search=?'
     list = @db.execute(query, [session[:username], params[:search]])
 
-    puts list.length
-
     if list.length == 0 then
       query = "INSERT INTO searches(username, search, date) VALUES(?, ?, DATETIME(?, 'localtime'));"
       @db.execute(query, [session[:username], params[:search], DateTime.now.to_s])
 
     else
-      puts 'updating'
       query = "UPDATE searches SET date=DATETIME(?, 'localtime') WHERE username=? AND search=?"
       @db.execute(query, [DateTime.now.to_s, session[:username], params[:search].chomp])
     end
@@ -71,15 +68,35 @@ end
 # When a campaign is being created
 post '/campaign' do
 
-  query = 'INSERT INTO campaigns(id, name, desc, keyword, username) VALUES(?, ?, ?, ?, ?)'
-  tweet = @client.update params[:desc]+' '+params[:keyword] # Tweet camp
+  # Error string
+  @error = ''
 
-  # Execute strings and prepare query
-  @db.execute(query, [tweet.id, params[:name], params[:desc], params[:keyword], session[:username]])
+  # Check for possible errors
+  if params[:name] == nil || params[:name].chomp == '' then
+    @error << 'Name of campaign cant be empty; '
+  end
 
-  # redirect user to campaign page
-  @submitted = true
-  @title = 'Creating a campaign'
+  if params[:desc] == nil || params[:desc].chomp == '' then
+    @error << 'Description cant be empty; '
+  end
+
+  if params[:keyword] == nil || params[:keyword].chomp == '' then
+    @error << 'Keyword cant be empty.'
+  end
+
+  # Inserts campaign if no errors
+  if @error == '' then
+    query = 'INSERT INTO campaigns(id, name, desc, keyword, username) VALUES(?, ?, ?, ?, ?)'
+    tweet = @client.update params[:desc]+' '+params[:keyword] # Tweet camp
+
+    # Execute strings and prepare query
+    @db.execute(query, [tweet.id, params[:name], params[:desc], params[:keyword], session[:username]])
+
+    # redirect user to campaign page
+    @submitted = true
+    @title = 'Creating a campaign'
+  end
+
   erb :campaigns
 end
 
@@ -129,11 +146,31 @@ get '/campaign_stat' do
   redirect '/' unless session[:logged_in]
 
   #Query to get campaign info
-  query = 'SELECT name, desc, keyword FROM campaigns WHERE id = ?;'
+  query = 'SELECT name, desc, keyword FROM campaigns WHERE id = ?'
+
+
   @campaign = @db.execute(query, [params[:id]])
 
   # Get a tweet list containing search results
   @search_list = @client.search(@campaign[0][2]).take(10)
+
+  # Order by if needed
+  if params[:order] != nil then
+    case params[:order]
+      when 'retweets'
+        # Sort list by retweet
+        @search_list.sort! { |a,b| a.retweet_count <=> b.retweet_count }
+        @search_list.reverse!
+
+      when 'favourites'
+        # Sort list by retweet
+        @search_list.sort! { |a,b| a.favorite_count <=> b.favorite_count }
+        @search_list.reverse!
+
+      else
+        # Do nout
+    end
+  end
 
   # Get the tweet sent out when making the campaign
   @tweet = @client.status(params[:id])

@@ -40,13 +40,8 @@ get '/show_friends' do
 
   first_follower = params[:last_id]
 
-  puts first_follower == nil
-
   @friends = first_follower == nil ? @client.friends.take(10) : @client.friends(:max_id => first_follower).take(10)
 
-  @friends.each do |user|
-    puts user.id
-  end
   erb :show_friends
 end
 
