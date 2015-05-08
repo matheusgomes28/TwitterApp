@@ -24,6 +24,9 @@ module NavigationHelpers
       when /the register page/
         '/register'
 
+      when /the error page/
+        '/nonsense'
+
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
