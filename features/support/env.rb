@@ -3,11 +3,11 @@ require 'rspec'
 require 'capybara/cucumber'
 
 ## Uncomment to enable SimpleCov
-#require 'simplecov'
+require 'simplecov'
 
-#SimpleCov.start do
-#  add_filter 'features/'
-#end
+SimpleCov.start do
+add_filter 'features/'
+end
 
 require_relative '../../control'
 

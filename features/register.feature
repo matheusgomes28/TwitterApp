@@ -9,11 +9,11 @@ Feature: Testing the "registering new accounts" feature of the system.
 
   Scenario: Registering with correct details
     Given I am on the register page
-    When I fill in "username" with "user2222" within "form"
-    When I fill in "password" with "secret2222" within "form"
-    When I fill in "cPassword" with "secret2222" within "form"
-    When I fill in "email" with "email2222@example.com" within "form"
-    When I fill in "twitter" with "twitterAccount2222" within "form"
+    When I fill in "username" with "user" within "form"
+    When I fill in "password" with "secret" within "form"
+    When I fill in "cPassword" with "secret" within "form"
+    When I fill in "email" with "email@example.com" within "form"
+    When I fill in "twitter" with "twitterAccount" within "form"
     When I fill in "consumer_key" with "EDIT THIS" within "form"
     When I fill in "consumer_secret" with "EDIT THIS" within "form"
     When I fill in "access_token" with "EDIT THIS" within "form"
@@ -24,7 +24,7 @@ Feature: Testing the "registering new accounts" feature of the system.
 
   Scenario: Logging in with the newly create account
     Given I am on the homepage
-    When I fill in "username" with "user2222" within "form"
-    When I fill in "password" with "secret2222" within "form"
+    When I fill in "username" with "user" within "form"
+    When I fill in "password" with "secret" within "form"
     When I press "Submit" within "form"
     Then I should see "Welcome user"
