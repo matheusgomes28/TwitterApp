@@ -28,7 +28,7 @@
     </table>
 </div>
 
-<form action="/automatic_follow" method="get" >
+<form name="automatic_follow" action="/automatic_follow" method="get" >
   <input type="hidden" name="id" value="<%=h @tweet.id %>" />
   <input type="hidden" name="keyword" value="<%=h @campaign[0][2] %>" />
   <input type="submit" value="Automatically Follow" class="sub_button" id="auto_follow"/>
