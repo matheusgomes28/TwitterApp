@@ -4,6 +4,15 @@
   <form action="/automatic_unfollow">
     <input type="submit" class="sub_button center" value="Unfollow Automatically"/>
   </form>
+  <% if params[:unfollowed] != nil then %>
+      <p style="width: 150px" class="center">Users unfollowed:
+        <% if params[:unfollowed] == 0 then %>
+        <span>None.</span>
+        <% else %>
+        <span><%=h params[:unfollowed] %></span>
+        <% end %>
+      </p>
+  <% end %>
   <table>
     <tr>
       <th>User</th>
