@@ -34,6 +34,15 @@
   <input type="submit" value="Automatically Follow" class="sub_button" id="auto_follow"/>
 </form>
 
+<% if params[:followed] != nil %>
+    <p style="width: 150px" class="center" >Users followed:
+      <% if params[:followed] == 0 %>
+          <span>none;</span>
+      <% else %>
+          <span><%=h params[:followed] %></span>
+      <% end %>
+    </p>
+<% end %>
 
 <!-- Table to show the usernames and tweets of people who have tweeted using the campaign keyword
      and a button to follow them -->

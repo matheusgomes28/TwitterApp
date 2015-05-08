@@ -6,25 +6,31 @@ BLACK_LIST_SCORE = 6
 
 get '/automatic_follow' do
 
+  followed = 0 # Holds users followed.
+
   # Take 10 most recent tweets
   search_list = @client.search('#'+params[:keyword]).take(10)
 
   # Examine each ecent tweet for new followers
   search_list.each do |tweet|
 
+    tweet_user = tweet.user
+
     # Create a possible new follower and init score
-    candidate = FollowerCandidate.new(@client, tweet.user, tweet)
+    candidate = FollowerCandidate.new(@client, tweet_user, tweet)
     score = candidate.calculate_score
 
     # Follows if candidate fills criteria
     if score > WHITE_LIST_SCORE then
-      @client.follow(tweet.user)
+      @client.follow(tweet_user)
+      followed += 1
     end
 
   end
 
+
   # Redirect back to campaign page
-  redirect "/campaign_stat?id=#{params[:id]}"
+  redirect "/campaign_stat?id=#{params[:id]}&followed=#{followed}"
 end
 
 
