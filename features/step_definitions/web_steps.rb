@@ -9,12 +9,15 @@ module WithinHelpers
 end
 World(WithinHelpers)
 
+OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE #Fix SSL problem
+
 # Edit if any of the settings change
 # regarding the login form
 LOGIN_FORM = 'form' #name of form
 ADMIN_USERNAME = 'matheus' #string of username
 ADMIN_PASSWORD = 'password' # Password (on my database)
 SUBMIT = 'Submit' # name of submit button
+
 
 Given /^(?:|I )am on (.+)$/ do |page_name|
   visit path_to(page_name)
