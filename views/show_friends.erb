@@ -1,7 +1,7 @@
 <%= erb :header %>
 <article id="form">
   <h1>Friends - People I follow.</h1>
-  <form action="/automatic_unfollow">
+  <form name="automatic_unfollow" action="/automatic_unfollow">
     <input type="submit" class="sub_button center" value="Unfollow Automatically"/>
   </form>
   <% if params[:unfollowed] != nil then %>

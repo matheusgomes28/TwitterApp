@@ -17,4 +17,8 @@ Feature: Automatic follow/unfollowing someone
     Then I should see "Users followed:"
 
 
-
+  Scenario: Automatically unfollow
+    Given I am logged in
+    When I follow "Friends" within "header"
+    When I press "Unfollow Automatically" within "form[name='automatic_unfollow']"
+    Then I should see "Users unfollowed:"
