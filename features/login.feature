@@ -5,14 +5,14 @@ Feature: Testing the login system.
 
   Scenario: Correct password and username entered
     Given I am on the homepage
-    When I fill in "username" with "matheus"
-    When I fill in "password" with "password"
+    When I fill in "username" with "aca14acb"
+    When I fill in "password" with "numauita"
     When I press "Submit" within "form"
     Then I should see "Welcome Back!"
 
   Scenario: Wrong password  and correct username entered
     Given I am on the homepage
-    When I fill in "username" with "matheus"
+    When I fill in "username" with "aca14acb"
     When I fill in "password" with "nonsense"
     When I press "Submit" within "form"
     Then I should see "Login"
@@ -20,7 +20,7 @@ Feature: Testing the login system.
 
   Scenario: Wrong password  and  username entered
     Given I am on the homepage
-    When I fill in "username" with "user"
+    When I fill in "username" with "user22"
     When I fill in "password" with "nonsense"
     When I press "Submit" within "form"
     Then I should see "Login"
@@ -28,8 +28,8 @@ Feature: Testing the login system.
 
   Scenario: Correct password  and wrong username entered
     Given I am on the homepage
-    When I fill in "username" with "user"
-    When I fill in "password" with "password"
+    When I fill in "username" with "user22"
+    When I fill in "password" with "numauita"
     When I press "Submit" within "form"
     Then I should see "Login"
     Then I should see "Error: Not a valid username"

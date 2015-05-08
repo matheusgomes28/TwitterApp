@@ -1,4 +1,4 @@
-Feature: Testing the navigation of the app
+Feature: Testing the navigation of the app to make sure that everything works fine
 
   Scenario: Be able to navigate to settings
     Given I am logged in
